@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HelioCenture — Premium Branding & Design Studio</title>
+<meta name="description" content="Complete branding package for ₹7,999. Logo, guidelines, collaterals — everything you need to launch confidently.">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='6' fill='%23E4572E'/><circle cx='16' cy='16' r='14' fill='none' stroke='%23111' stroke-width='2'/><circle cx='16' cy='4' r='2.5' fill='%23111'/></svg>">
+<style>
+:root{--color-accent:#E4572E;--color-accent-hover:#C93D15;--color-bg:#F8F8F6;--color-surface:#F2F2EF;--color-surface-2:#EAEAE7;--color-text:#111;--color-text-muted:#6B6B6B;--color-border:#E5E5E5;--space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;--text-xs:clamp(.75rem,.7rem + .25vw,.875rem);--text-sm:clamp(.875rem,.8rem + .35vw,1rem);--text-base:clamp(1rem,.95rem + .25vw,1.125rem);--text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);--text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);--text-hero:clamp(3rem,.5rem + 7vw,4.5rem);--radius-sm:.375rem;--radius-md:.5rem;--radius-lg:.75rem;--radius-xl:1rem;--radius-2xl:1.5rem;--radius-full:9999px;--shadow-sm:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);--shadow-md:0 4px 12px rgba(0,0,0,.08),0 2px 4px rgba(0,0,0,.05);--shadow-lg:0 12px 32px rgba(0,0,0,.10),0 4px 8px rgba(0,0,0,.06);--ease-spring:cubic-bezier(.16,1,.3,1);--transition:200ms var(--ease-spring);--content-narrow:640px;--content-default:960px;--content-wide:1280px;--font-body:'Satoshi','Inter',sans-serif;--font-display:'Instrument Serif',Georgia,serif}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-body);font-size:var(--text-base);color:var(--color-text);background:var(--color-bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:var(--font-body)}
+.container{width:100%;max-width:var(--content-wide);margin-inline:auto;padding-inline:var(--space-6)}
+.container--narrow{max-width:var(--content-narrow)}
+.container--default{max-width:var(--content-default)}
+section{padding-block:clamp(var(--space-16),8vw,var(--space-24))}
+.em-serif{font-family:var(--font-display);font-style:italic;font-weight:400}
+.section-heading{font-size:var(--text-2xl);font-weight:700;line-height:1.15;margin-bottom:var(--space-6);text-align:center}
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;background:var(--color-accent);color:#fff;border-radius:var(--radius-lg);padding:var(--space-3) var(--space-6);font-family:var(--font-body);font-size:var(--text-sm);font-weight:500;border:none;transition:background var(--transition),transform var(--transition),box-shadow var(--transition);min-height:44px}
+.btn-primary:hover{background:var(--color-accent-hover);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-primary:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.btn-secondary{display:inline-flex;align-items:center;justify-content:center;background:transparent;color:var(--color-text);border:1.5px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-3) var(--space-6);font-family:var(--font-body);font-size:var(--text-sm);font-weight:500;transition:border-color var(--transition),background var(--transition);min-height:44px}
+.btn-secondary:hover{border-color:var(--color-text-muted);background:var(--color-surface)}
+.btn-secondary:focus-visible{outline:2px solid var(--color-text);outline-offset:2px}
+.card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-2xl);padding:var(--space-8);box-shadow:var(--shadow-sm);transition:all 350ms var(--ease-spring)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.fade-in{opacity:1}
+@supports(animation-timeline:scroll()){.fade-in{opacity:0;animation:reveal-fade linear both;animation-timeline:view();animation-range:entry 0% entry 60%}}
+@keyframes reveal-fade{to{opacity:1}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* === NAVBAR === */
+.navbar{position:fixed;top:var(--space-4);left:50%;transform:translateX(-50%);z-index:100;background:color-mix(in srgb,var(--color-bg) 90%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:var(--radius-full);box-shadow:var(--shadow-md);border:1px solid var(--color-border);padding:var(--space-2) var(--space-3);display:flex;align-items:center;gap:var(--space-2);max-width:720px;width:calc(100% - var(--space-8))}
+.navbar__logo{display:flex;align-items:center;padding-left:var(--space-2)}
+.navbar__logo img{height:22px;width:auto;object-fit:contain}
+.navbar__links{display:flex;align-items:center;gap:var(--space-1);margin-left:auto}
+.navbar__links a{font-size:var(--text-sm);font-weight:500;padding:var(--space-2) var(--space-3);border-radius:var(--radius-md);transition:background var(--transition);white-space:nowrap}
+.navbar__links a:hover{background:var(--color-surface)}
+.navbar__links a:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.navbar__cta{margin-left:var(--space-1);white-space:nowrap;flex-shrink:0}
+.navbar__theme-toggle{background:none;border:none;padding:var(--space-2);border-radius:var(--radius-md);color:var(--color-text-muted);display:flex;align-items:center;transition:color var(--transition)}
+.navbar__theme-toggle:hover{color:var(--color-text)}
+.navbar__theme-toggle svg{width:18px;height:18px}
+.navbar__hamburger{display:none;background:none;border:none;padding:var(--space-2);color:var(--color-text)}
+.navbar__hamburger svg{width:22px;height:22px}
+.mobile-drawer{display:none;position:fixed;inset:0;z-index:99;background:color-mix(in srgb,var(--color-bg) 97%,transparent);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:var(--space-6)}
+.mobile-drawer.open{display:flex}
+.mobile-drawer a{font-size:var(--text-lg);font-weight:500;padding:var(--space-3)}
+.mobile-drawer .btn-primary{margin-top:var(--space-4)}
+.drawer-close{position:absolute;top:var(--space-4);right:var(--space-6);background:none;border:none;color:var(--color-text);padding:var(--space-2)}
+.drawer-close svg{width:24px;height:24px}
+@media(max-width:768px){.navbar__links,.navbar__cta{display:none}.navbar__hamburger{display:flex}}
+
+/* === HERO === */
+.hero{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:calc(var(--space-24) + var(--space-16));padding-bottom:var(--space-16);background-image:radial-gradient(var(--color-border) 1.5px,transparent 0);background-size:32px 32px;background-position:-16px -16px}
+.hero .container{display:flex;flex-direction:column;align-items:center}
+.hero__headline{font-size:var(--text-hero);font-weight:700;line-height:1.08;max-width:820px;margin-inline:auto;margin-bottom:var(--space-6)}
+.hero__sub{font-size:var(--text-base);color:var(--color-text-muted);max-width:560px;margin-inline:auto;margin-bottom:var(--space-8);line-height:1.6}
+.hero__btns{display:flex;gap:var(--space-4);flex-wrap:wrap;justify-content:center;margin-bottom:var(--space-16)}
+.clients-marquee{width:100%;max-width:100vw;overflow:hidden;padding-block:var(--space-8);mask-image:linear-gradient(to right, transparent, black 10%, black 90%, transparent);-webkit-mask-image:linear-gradient(to right, transparent, black 10%, black 90%, transparent)}
+.clients-marquee__track{display:flex;align-items:center;gap:var(--space-12);width:max-content;animation:marquee 40s linear infinite}
+.clients-marquee__track img{height:44px;width:auto;object-fit:contain}
+@keyframes marquee{to{transform:translateX(calc(-50% - (var(--space-12) / 2)))}}
+@media(max-width:640px){.hero__btns{flex-direction:column;align-items:center}.clients-marquee__track img{height:32px}}
+
+/* === PROBLEM === */
+.problem{background:var(--color-bg)}
+.problem__inner{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12);align-items:center}
+.problem__text{text-align:left}
+.problem__text .section-heading{text-align:left}
+.problem__body{color:var(--color-text-muted);font-size:var(--text-base);margin-bottom:var(--space-8);max-width:480px}
+.problem__features{background:var(--color-accent);color:#fff;border-radius:var(--radius-2xl);padding:var(--space-8);display:flex;flex-direction:column;gap:var(--space-6)}
+.problem__feature{display:flex;gap:var(--space-4);align-items:flex-start;font-size:var(--text-base);line-height:1.5}
+.problem__feature-icon{flex-shrink:0;width:40px;height:40px;background:rgba(255,255,255,0.18);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center}
+.problem__feature-icon svg{width:20px;height:20px;color:#fff}
+.problem__feature-content{display:flex;flex-direction:column;gap:var(--space-1)}
+.problem__feature-title{font-weight:600;font-size:var(--text-base)}
+.problem__feature-desc{font-size:var(--text-sm);opacity:0.85}
+@media(max-width:768px){.problem__inner{grid-template-columns:1fr}}
+
+/* === PRICING === */
+.pricing-section{background:var(--color-bg)}
+.pricing-card{max-width:560px;margin-inline:auto;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-2xl);padding:var(--space-10);box-shadow:var(--shadow-lg);position:relative}
+.pricing-card__badge{display:inline-block;background:var(--color-accent);color:#fff;font-size:var(--text-xs);font-weight:500;padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);margin-bottom:var(--space-4)}
+.pricing-card__price{font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-6)}
+.pricing-card__list{list-style:none;display:flex;flex-direction:column;gap:var(--space-3);margin-bottom:var(--space-6)}
+.pricing-card__list li{display:flex;gap:var(--space-3);align-items:flex-start;font-size:var(--text-base)}
+.pricing-card__list svg{flex-shrink:0;width:20px;height:20px;color:var(--color-accent);margin-top:2px}
+.pricing-card__delivery{font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-6);padding-top:var(--space-4);border-top:1px solid var(--color-border)}
+.pricing-card .btn-primary{width:100%;justify-content:center;padding-block:var(--space-4)}
+.pricing-card__guarantee{display:flex;align-items:center;gap:var(--space-2);justify-content:center;margin-top:var(--space-4);font-size:var(--text-sm);color:var(--color-text-muted)}
+.pricing-card__guarantee svg{width:18px;height:18px;color:var(--color-accent)}
+
+/* === SERVICES === */
+.services{background:var(--color-bg);text-align:center}
+.services .container{display:flex;flex-direction:column;align-items:center}
+.services__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6);width:100%}
+.services__grid .card{text-align:center;display:flex;flex-direction:column;align-items:center}
+.services__icon{color:var(--color-text-muted);margin-bottom:var(--space-4)}
+.services__icon svg{width:28px;height:28px}
+.services__title{font-size:var(--text-lg);font-weight:600;margin-bottom:var(--space-2)}
+.services__body{color:var(--color-text-muted);font-size:var(--text-base);margin-bottom:var(--space-6)}
+@media(max-width:768px){.services__grid{grid-template-columns:1fr}}
+
+/* === PORTFOLIO === */
+.portfolio{background:var(--color-bg);text-align:center}
+.portfolio .container{display:flex;flex-direction:column;align-items:center}
+.portfolio__filters{display:flex;gap:var(--space-2);flex-wrap:wrap;margin-bottom:var(--space-8);justify-content:center}
+.filter-pill{font-size:var(--text-sm);font-weight:500;padding:var(--space-2) var(--space-4);border-radius:var(--radius-full);border:1.5px solid var(--color-border);background:transparent;color:var(--color-text);cursor:pointer;transition:all var(--transition);min-height:44px}
+.filter-pill:hover{border-color:var(--color-text-muted);background:var(--color-surface)}
+.filter-pill.active{background:var(--color-accent);color:#fff;border-color:var(--color-accent)}
+.masonry{columns:3 280px;column-gap:var(--space-4);transition:columns 0.3s ease}
+.masonry.masonry--condensed{columns:5 150px}
+.masonry>*{break-inside:avoid;margin-bottom:var(--space-4)}
+.portfolio-item{position:relative;border-radius:var(--radius-xl);overflow:hidden;display:block}
+.portfolio-item.hidden{display:none}
+.portfolio-item img{width:100%;display:block;transition:transform 500ms var(--ease-spring)}
+.portfolio-item:hover img{transform:scale(1.03)}
+.portfolio-item__badge{position:absolute;bottom:var(--space-3);left:var(--space-3);background:color-mix(in srgb,var(--color-bg) 85%,transparent);backdrop-filter:blur(8px);font-size:var(--text-xs);font-weight:500;padding:var(--space-1) var(--space-3);border-radius:var(--radius-full)}
+@media(max-width:640px){.masonry{columns:1}}
+
+/* === TESTIMONIALS === */
+.testimonials{background:var(--color-bg);text-align:center}
+.testimonials .container{display:flex;flex-direction:column;align-items:center}
+.testimonials__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6);margin-bottom:var(--space-12);width:100%}
+.testimonial-card{text-align:center}
+.testimonial-card__stars{display:flex;gap:2px;margin-bottom:var(--space-4);justify-content:center}
+.testimonial-card__stars svg{width:16px;height:16px;color:var(--color-accent)}
+.testimonial-card__quote{font-size:var(--text-base);line-height:1.65;margin-bottom:var(--space-4);color:var(--color-text)}
+.testimonial-card__author{font-size:var(--text-sm);color:var(--color-text-muted)}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6);text-align:center;padding:var(--space-8) var(--space-6);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-2xl);box-shadow:var(--shadow-sm);width:100%}
+.stat__icon{width:44px;height:44px;border-radius:var(--radius-full);background:color-mix(in srgb,var(--color-accent) 12%,transparent);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-3)}
+.stat__icon svg{width:20px;height:20px;color:var(--color-accent)}
+.stat__number{font-size:var(--text-xl);font-weight:700}
+.stat__label{font-size:var(--text-sm);color:var(--color-text-muted)}
+@media(max-width:640px){.stats-row{grid-template-columns:1fr;gap:var(--space-4)}}
+@media(max-width:768px){.testimonials__grid{grid-template-columns:1fr}}
+
+/* === PROCESS === */
+.process{background:var(--color-bg);text-align:center}
+.process .container{display:flex;flex-direction:column;align-items:center}
+.process__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6);position:relative;width:100%}
+.process__step{text-align:center;display:flex;flex-direction:column;align-items:center}
+.process__num{width:56px;height:56px;border-radius:var(--radius-full);background:color-mix(in srgb,var(--color-accent) 12%,transparent);display:flex;align-items:center;justify-content:center;font-size:var(--text-2xl);font-weight:700;color:var(--color-accent);margin-bottom:var(--space-4)}
+.process__step-title{font-size:var(--text-lg);font-weight:600;margin-bottom:var(--space-2)}
+.process__step-body{color:var(--color-text-muted);font-size:var(--text-base)}
+.process__arrow{display:none;position:absolute;top:28px;color:var(--color-border)}
+@media(min-width:769px){.process__arrow{display:block}.process__arrow--1{left:calc(33.33% - 14px)}.process__arrow--2{left:calc(66.66% - 14px)}}
+@media(max-width:768px){.process__grid{grid-template-columns:1fr}}
+
+/* === PRICING TABLE === */
+.pricing-table{background:var(--color-bg);text-align:center}
+.pricing-table .container{display:flex;flex-direction:column;align-items:center}
+.pricing-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1px;background:var(--color-border);border-radius:var(--radius-2xl);overflow:hidden;max-width:800px;margin-inline:auto;margin-bottom:var(--space-6)}
+.pricing-grid>div{background:var(--color-surface);padding:var(--space-4) var(--space-6);font-size:var(--text-base)}
+.pricing-grid__head{font-weight:600;background:var(--color-surface-2)!important}
+.pricing-grid__badge{display:inline-block;background:var(--color-accent);color:#fff;font-size:var(--text-xs);padding:2px var(--space-2);border-radius:var(--radius-full);margin-left:var(--space-2)}
+.pricing-includes{text-align:center;font-size:var(--text-sm);color:var(--color-text-muted);max-width:800px;margin-inline:auto;margin-bottom:var(--space-8)}
+@media(max-width:640px){.pricing-grid{grid-template-columns:1fr}.pricing-grid>div{text-align:center}}
+
+/* === OBJECTION === */
+.objection{background:var(--color-bg);text-align:center}
+.objection .container{display:flex;flex-direction:column;align-items:center}
+.objection__grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);max-width:var(--content-default);width:100%}
+.objection__card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-2xl);padding:var(--space-8);text-align:center;display:flex;flex-direction:column;align-items:center;box-shadow:var(--shadow-sm);transition:all 350ms var(--ease-spring)}
+.objection__card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.objection__icon{width:52px;height:52px;border-radius:var(--radius-full);background:color-mix(in srgb,var(--color-accent) 12%,transparent);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-4)}
+.objection__icon svg{width:24px;height:24px;color:var(--color-accent)}
+.objection__item-title{font-weight:700;font-size:var(--text-lg);margin-bottom:var(--space-2)}
+.objection__item-body{color:var(--color-text-muted);font-size:var(--text-sm);line-height:1.6}
+@media(max-width:640px){.objection__grid{grid-template-columns:1fr}}
+
+/* === FINAL CTA === */
+.final-cta{background:var(--color-surface);text-align:center;padding-block:clamp(var(--space-20),10vw,8rem)}
+.final-cta .section-heading{text-align:center}
+.final-cta__body{font-size:var(--text-lg);color:var(--color-text-muted);max-width:560px;margin-inline:auto;margin-bottom:var(--space-8)}
+.final-cta__btns{display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;margin-bottom:var(--space-6)}
+.final-cta__guarantee{font-size:var(--text-sm);color:var(--color-text-muted)}
+
+/* === FOOTER === */
+.footer{border-top:1px solid var(--color-border);padding-block:var(--space-12)}
+.footer__inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--space-6)}
+.footer__logo{display:flex;align-items:center;gap:var(--space-2);font-weight:700;font-size:var(--text-sm)}
+.footer__logo img{height:24px;width:auto}
+.footer__contact{font-size:var(--text-sm);color:var(--color-text-muted)}
+.footer__links{display:flex;gap:var(--space-4)}
+.footer__links a{font-size:var(--text-sm);color:var(--color-text-muted);transition:color var(--transition)}
+.footer__links a:hover{color:var(--color-text)}
+.footer__social{display:flex;gap:var(--space-3)}
+.footer__social a{color:var(--color-text-muted);transition:color var(--transition)}
+.footer__social a:hover{color:var(--color-text)}
+.footer__social svg{width:20px;height:20px}
+.footer__copy{width:100%;text-align:center;font-size:var(--text-xs);color:var(--color-text-muted);padding-top:var(--space-6);border-top:1px solid var(--color-border)}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar" role="banner">
+<a href="#" class="navbar__logo" aria-label="HelioCenture Home"><img src="assets/logo.png" alt="HelioCenture" height="28"></a>
+<nav class="navbar__links" role="navigation"><a href="#work">Work</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
+<a href="#pricing" class="btn-primary navbar__cta">Get Branding</a>
+
+<button class="navbar__hamburger" aria-label="Open menu" onclick="document.getElementById('drawer').classList.add('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+</header>
+<div class="mobile-drawer" id="drawer"><button class="drawer-close" aria-label="Close menu" onclick="this.parentElement.classList.remove('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button><a href="#work" onclick="this.parentElement.classList.remove('open')">Work</a><a href="#services" onclick="this.parentElement.classList.remove('open')">Services</a><a href="#pricing" onclick="this.parentElement.classList.remove('open')">Pricing</a><a href="#contact" onclick="this.parentElement.classList.remove('open')">Contact</a><a href="#pricing" class="btn-primary" onclick="this.parentElement.classList.remove('open')">Get Branding</a></div>
+
+<main>
+<!-- Section 1: Hero -->
+<section class="hero" id="hero">
+<div class="container">
+<h1 class="hero__headline fade-in">Your Brand Deserves <em class="em-serif">Better Than Average</em></h1>
+<p class="hero__sub fade-in">Complete branding package for just ₹7,999. Logo, guidelines, collaterals — everything you need to launch confidently or scale faster.</p>
+<div class="hero__btns"><a href="#pricing" class="btn-primary">Get Your Branding Package</a><a href="#work" class="btn-secondary">View Our Work ↓</a></div>
+<div class="clients-marquee fade-in">
+<div class="clients-marquee__track">
+<!-- Set 1 -->
+<img src="assets/clients/ANJAPPAR-LOGO-01.png" alt="Anjappar" loading="lazy">
+<img src="assets/clients/BR-New-Logo.png" alt="BR New Logo" loading="lazy">
+<img src="assets/clients/Chennai-Kulfi-Logo-Website.png" alt="Chennai Kulfi" loading="lazy">
+<img src="assets/clients/CT-black.png" alt="CT" loading="lazy">
+<img src="assets/clients/Erodu-Amman-Mess.png" alt="Erodu Amman Mess" loading="lazy">
+<img src="assets/clients/GMAK-LASER-LOGO-FINAL.pdf-1-01.png" alt="GMAK Laser" loading="lazy">
+<img src="assets/clients/mtc-logo.png" alt="MTC" loading="lazy">
+<img src="assets/clients/Photons-Logo.png" alt="Photons" loading="lazy">
+<img src="assets/clients/SkyMD-logo.png" alt="SkyMD" loading="lazy">
+<img src="assets/clients/Tiger-Eye-logo.png" alt="Tiger Eye" loading="lazy">
+<!-- Set 2 (Duplicated for seamless infinite scroll) -->
+<img src="assets/clients/ANJAPPAR-LOGO-01.png" alt="Anjappar" loading="lazy">
+<img src="assets/clients/BR-New-Logo.png" alt="BR New Logo" loading="lazy">
+<img src="assets/clients/Chennai-Kulfi-Logo-Website.png" alt="Chennai Kulfi" loading="lazy">
+<img src="assets/clients/CT-black.png" alt="CT" loading="lazy">
+<img src="assets/clients/Erodu-Amman-Mess.png" alt="Erodu Amman Mess" loading="lazy">
+<img src="assets/clients/GMAK-LASER-LOGO-FINAL.pdf-1-01.png" alt="GMAK Laser" loading="lazy">
+<img src="assets/clients/mtc-logo.png" alt="MTC" loading="lazy">
+<img src="assets/clients/Photons-Logo.png" alt="Photons" loading="lazy">
+<img src="assets/clients/SkyMD-logo.png" alt="SkyMD" loading="lazy">
+<img src="assets/clients/Tiger-Eye-logo.png" alt="Tiger Eye" loading="lazy">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 2: Problem + Outcome -->
+<section class="problem" id="about">
+<div class="container">
+<div class="problem__inner">
+<div class="problem__text">
+<h2 class="section-heading fade-in">Building a Brand Shouldn't Feel <em class="em-serif">This Hard</em></h2>
+<p class="problem__body">Most businesses waste months and lakhs on scattered freelancers, inconsistent designs, and endless revisions. You need clarity, speed, and professional quality — without the agency bloat.</p>
+<a href="#pricing" class="btn-primary">Start Your Branding Journey</a>
+</div>
+<div class="problem__features fade-in">
+<div class="problem__feature">
+<div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg></div>
+<div class="problem__feature-content"><span class="problem__feature-title">Complete brand identity in 7–10 days</span><span class="problem__feature-desc">Fast turnaround without cutting corners</span></div>
+</div>
+<div class="problem__feature">
+<div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><circle cx="7" cy="7" r="1" fill="currentColor"/></svg></div>
+<div class="problem__feature-content"><span class="problem__feature-title">One fixed price, zero hidden costs</span><span class="problem__feature-desc">₹7,999 all-inclusive — no surprises</span></div>
+</div>
+<div class="problem__feature">
+<div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+<div class="problem__feature-content"><span class="problem__feature-title">Design consistency across touchpoints</span><span class="problem__feature-desc">Logo, cards, letterhead — one unified look</span></div>
+</div>
+<div class="problem__feature">
+<div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+<div class="problem__feature-content"><span class="problem__feature-title">Retainer flexibility for growth</span><span class="problem__feature-desc">Scale up with websites, social, and ads</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 3: Flagship Pricing -->
+<section class="pricing-section" id="pricing">
+<div class="container">
+<h2 class="section-heading fade-in" style="text-align:center">Everything You Need to <em class="em-serif">Launch Strong</em></h2>
+<div class="pricing-card fade-in">
+<span class="pricing-card__badge">Most Popular</span>
+<div class="pricing-card__price">₹7,999</div>
+<ul class="pricing-card__list">
+<li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Custom Logo Design — 3 concepts + unlimited revisions</li>
+<li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Brand Guidelines — Colours, fonts, usage rules</li>
+<li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Business Card Design — Print-ready files</li>
+<li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Letterhead Design</li>
+<li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Envelope Design</li>
+</ul>
+<p class="pricing-card__delivery">7–10 working days &nbsp;|&nbsp; Format: Source files + PDFs</p>
+<a href="#contact" class="btn-primary">Claim Your Package Now</a>
+<div class="pricing-card__guarantee"><svg viewBox="0 0 20 20" fill="none"><path d="M10 1l2.5 3H16a1 1 0 011 1v3.5L19.5 11 17 13.5V17a1 1 0 01-1 1h-3.5L10 20.5 7.5 18H4a1 1 0 01-1-1v-3.5L.5 11 3 8.5V5a1 1 0 011-1h3.5L10 1z" stroke="currentColor" stroke-width="1.5"/><path d="M7 11l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>100% Satisfaction Guaranteed</div>
+</div>
+</div>
+</section>
+
+<!-- Section 4: Additional Services -->
+<section class="services" id="services">
+<div class="container">
+<h2 class="section-heading fade-in">We Grow With <em class="em-serif">Your Business</em></h2>
+<div class="services__grid">
+<div class="card fade-in"><div class="services__icon"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="14" cy="14" r="12"/><path d="M2 14h24M14 2a18 18 0 010 24M14 2a18 18 0 000 24"/></svg></div><h3 class="services__title">Website Development</h3><p class="services__body">WordPress, responsive, SEO-ready</p><a href="#contact" class="btn-secondary">Get Website Quote →</a></div>
+<div class="card fade-in"><div class="services__icon"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="20" height="20" rx="2"/><rect x="4" y="10" width="20" height="8" rx="1"/><rect x="4" y="16" width="20" height="8" rx="1"/></svg></div><h3 class="services__title">Social Media Retainer</h3><p class="services__body">Unlimited posts & creatives</p><a href="#contact" class="btn-secondary">Explore Retainer Plans →</a></div>
+<div class="card fade-in"><div class="services__icon"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v8l6 3"/><circle cx="14" cy="14" r="11"/><path d="M8 22l-3 4M20 22l3 4"/></svg></div><h3 class="services__title">Ad Creative Design</h3><p class="services__body">Meta, Google, LinkedIn ads</p><a href="#contact" class="btn-secondary">Request Ad Samples →</a></div>
+</div>
+</div>
+</section>
+
+<!-- Section 5: Portfolio -->
+<section class="portfolio" id="work">
+<div class="container">
+<h2 class="section-heading fade-in">Brands We've Built <em class="em-serif">From Scratch</em></h2>
+<div class="portfolio__filters" role="group" aria-label="Filter portfolio">
+<button class="filter-pill active" data-filter="branding">Branding</button>
+<button class="filter-pill" data-filter="websites">Websites</button>
+<button class="filter-pill" data-filter="social">Social Media</button>
+<button class="filter-pill" data-filter="ads">Ad Creatives</button>
+</div>
+<div class="masonry" id="portfolio-grid">
+<!-- Branding -->
+<div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/Bubble%20Organic%20Logo.png" alt="Bubble Organic" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Branding</span></div>
+<div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/Cinnamon%20Rolls.png" alt="Cinnamon Rolls" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Branding</span></div>
+<div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/Eskay%20packing%20Logo.png" alt="Eskay Packing" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Branding</span></div>
+<div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/Flabour%20Hub%20Logo.png" alt="Flabour Hub" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Branding</span></div>
+<div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/Gows%20Bai%20Kari%20Kadai%20Logo.png" alt="Gows Bai Kari Kadai" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Branding</span></div>
+<div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/Indian%20Institute%20of%20Catering%20Logo.png" alt="Indian Institute of Catering" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Branding</span></div>
+<div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/Mabia%20Boutique%20Logo.png" alt="Mabia Boutique" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Branding</span></div>
+<div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/Madras%20Diabetes%20Center%20Logo.png" alt="Madras Diabetes Center" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Branding</span></div>
+<div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/Sarvam%20Fresh%20Logo.png" alt="Sarvam Fresh" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Branding</span></div>
+<div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/Serene%20Tea%20Logo.png" alt="Serene Tea" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Branding</span></div>
+<div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/Slurp%20Club%20Logo.png" alt="Slurp Club" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Branding</span></div>
+<div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/Tea%20Master%20Logo.png" alt="Tea Master" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Branding</span></div>
+
+<!-- Websites -->
+<div class="portfolio-item fade-in" data-category="websites"><a href="https://www.attentionportfolio.com/" target="_blank" rel="noopener"><img src="Website%20Portfolio/Attention%20Portfolio.png" alt="Attention Portfolio" width="600" height="400" loading="lazy" decoding="async"></a><span class="portfolio-item__badge">Websites</span></div>
+<div class="portfolio-item fade-in" data-category="websites"><a href="https://ecovive.in/" target="_blank" rel="noopener"><img src="Website%20Portfolio/Ecovive.png" alt="Ecovive" width="600" height="400" loading="lazy" decoding="async"></a><span class="portfolio-item__badge">Websites</span></div>
+<div class="portfolio-item fade-in" data-category="websites"><a href="https://gmaklaser.com/" target="_blank" rel="noopener"><img src="Website%20Portfolio/Gmak%20Laser.png" alt="Gmak Laser" width="600" height="400" loading="lazy" decoding="async"></a><span class="portfolio-item__badge">Websites</span></div>
+<div class="portfolio-item fade-in" data-category="websites"><a href="https://ironx.co.in/" target="_blank" rel="noopener"><img src="Website%20Portfolio/IRONX.png" alt="IRONX" width="600" height="400" loading="lazy" decoding="async"></a><span class="portfolio-item__badge">Websites</span></div>
+<div class="portfolio-item fade-in" data-category="websites"><a href="https://www.ourshoulders.in/" target="_blank" rel="noopener"><img src="Website%20Portfolio/Our%20Shoulders.png" alt="Our Shoulders" width="600" height="400" loading="lazy" decoding="async"></a><span class="portfolio-item__badge">Websites</span></div>
+<div class="portfolio-item fade-in" data-category="websites"><a href="https://photonsfood.com/" target="_blank" rel="noopener"><img src="Website%20Portfolio/Photons.png" alt="Photons" width="600" height="400" loading="lazy" decoding="async"></a><span class="portfolio-item__badge">Websites</span></div>
+<div class="portfolio-item fade-in" data-category="websites"><a href="https://qspacesystems.in/" target="_blank" rel="noopener"><img src="Website%20Portfolio/Q%20Space.png" alt="Q Space" width="600" height="400" loading="lazy" decoding="async"></a><span class="portfolio-item__badge">Websites</span></div>
+<div class="portfolio-item fade-in" data-category="websites"><a href="https://stematic.co.in/" target="_blank" rel="noopener"><img src="Website%20Portfolio/Stematic.png" alt="Stematic" width="600" height="400" loading="lazy" decoding="async"></a><span class="portfolio-item__badge">Websites</span></div>
+
+<!-- Social Media -->
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Ajantha%20Baker%20Post%201.png" alt="Ajantha Baker Post 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Ajantha%20Baker%20Post%202.png" alt="Ajantha Baker Post 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Ajantha%20Baker%20Post%203.png" alt="Ajantha Baker Post 3" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Anjappar%20Post%201.png" alt="Anjappar Post 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Anjappar%20Post%202.png" alt="Anjappar Post 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Anjappar%20Post%203.png" alt="Anjappar Post 3" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Anjappar%20Post%204.png" alt="Anjappar Post 4" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Anjappar%20Post%205.png" alt="Anjappar Post 5" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Anjappar%20Post%206.png" alt="Anjappar Post 6" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Coromandel%20Post%201.png" alt="Coromandel Post 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Coromandel%20Post%202.png" alt="Coromandel Post 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Coromandel%20Post%203.png" alt="Coromandel Post 3" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/IVS%20Post%201.png" alt="IVS Post 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/IVS%20Post%202.png" alt="IVS Post 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/IVS%20Post%203.png" alt="IVS Post 3" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Photons%20Post%201.png" alt="Photons Post 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Photons%20Post%202.png" alt="Photons Post 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Photons%20Post%203.png" alt="Photons Post 3" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Salem%20RR%20Post%201.png" alt="Salem RR Post 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Salem%20RR%20Post%202.png" alt="Salem RR Post 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/Salem%20RR%20Post%203.png" alt="Salem RR Post 3" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/skyMD%20Post%201.png" alt="skyMD Post 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/skyMD%20Post%202.png" alt="skyMD Post 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+<div class="portfolio-item fade-in" data-category="social"><img src="Social%20Media%20Posts%20Portfolio/skyMD%20Post%203.png" alt="skyMD Post 3" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Social Media</span></div>
+
+<!-- Ads -->
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Ajantha%20AD%20Creative%201.png" alt="Ajantha AD Creative 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Ajantha%20AD%20Creative%202.png" alt="Ajantha AD Creative 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Ajantha%20AD%20Creative%203.png" alt="Ajantha AD Creative 3" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Ajantha%20AD%20Creative%204.png" alt="Ajantha AD Creative 4" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Anjappar%20AD%20Creative%201.png" alt="Anjappar AD Creative 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Anjappar%20AD%20Creative%202.png" alt="Anjappar AD Creative 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Bombay%20Republic%20AD%20Creative%201.png" alt="Bombay Republic AD Creative 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Bombay%20Republic%20AD%20Creative%202.png" alt="Bombay Republic AD Creative 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Coromandel%20AD%20Creative%201.png" alt="Coromandel AD Creative 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Coromandel%20AD%20Creative%202.png" alt="Coromandel AD Creative 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Coromandel%20AD%20Creative%203.png" alt="Coromandel AD Creative 3" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/EAM%20AD%20Creative%201.png" alt="EAM AD Creative 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/EAM%20AD%20Creative%202.png" alt="EAM AD Creative 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Eskay%20Pack%20AD%20Creative%201.png" alt="Eskay Pack AD Creative 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Eskay%20Pack%20AD%20Creative%202.png" alt="Eskay Pack AD Creative 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Gmak%20AD%20Creative%201.png" alt="Gmak AD Creative 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Gmak%20AD%20Creative%202.png" alt="Gmak AD Creative 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Zacs%20AD%20Creative%201.png" alt="Zacs AD Creative 1" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Zacs%20AD%20Creative%202.png" alt="Zacs AD Creative 2" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+<div class="portfolio-item fade-in" data-category="ads"><img src="Social%20Media%20AD%20Creatives/Zacs%20AD%20Creative%203.png" alt="Zacs AD Creative 3" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Ad Creatives</span></div>
+</div>
+<div style="text-align:center;margin-top:var(--space-10)"><a href="#contact" class="btn-primary">See How We Can Transform Your Brand</a></div>
+</div>
+</section>
+
+<!-- Section 6: Testimonials -->
+<section class="testimonials">
+<div class="container">
+<h2 class="section-heading fade-in">Results Our Clients <em class="em-serif">Actually See</em></h2>
+<div class="testimonials__grid">
+<div class="card testimonial-card fade-in">
+<div class="testimonial-card__stars"><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg></div>
+<p class="testimonial-card__quote">"Transformed our startup's identity in just 8 days. The brand guidelines were production-ready from day one."</p>
+<p class="testimonial-card__author">— Founder, Tech Startup</p>
+</div>
+<div class="card testimonial-card fade-in">
+<div class="testimonial-card__stars"><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg></div>
+<p class="testimonial-card__quote">"Our social engagement tripled after the rebrand. Best investment we made."</p>
+<p class="testimonial-card__author">— Marketing Head</p>
+</div>
+<div class="card testimonial-card fade-in">
+<div class="testimonial-card__stars"><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor"/></svg></div>
+<p class="testimonial-card__quote">"₹7,999 for this quality? Unbelievable value. Completely exceeded expectations."</p>
+<p class="testimonial-card__author">— Business Owner</p>
+</div>
+</div>
+<div class="stats-row fade-in">
+<div>
+<div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 3 0 3 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-3 0-3"/></svg></div>
+<div class="stat__number">50+</div><div class="stat__label">Brands Launched</div>
+</div>
+<div>
+<div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+<div class="stat__number">4.9/5</div><div class="stat__label">Rating</div>
+</div>
+<div>
+<div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+<div class="stat__number">7-Day</div><div class="stat__label">Delivery Promise</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 7: Process -->
+<section class="process">
+<div class="container">
+<h2 class="section-heading fade-in" style="text-align:center">Three Simple Steps to Your <em class="em-serif">New Brand</em></h2>
+<div class="process__grid">
+<div class="process__step card fade-in"><div class="process__num">1</div><h3 class="process__step-title">Brief & Discovery</h3><p class="process__step-body">We learn your vision, audience, and goals.</p></div>
+<svg class="process__arrow process__arrow--1" width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14h16m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<div class="process__step card fade-in"><div class="process__num">2</div><h3 class="process__step-title">Design & Review</h3><p class="process__step-body">You receive concepts; we refine until perfect.</p></div>
+<svg class="process__arrow process__arrow--2" width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14h16m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<div class="process__step card fade-in"><div class="process__num">3</div><h3 class="process__step-title">Launch & Scale</h3><p class="process__step-body">Final files delivered, brand-ready for the world.</p></div>
+</div>
+<div style="text-align:center;margin-top:var(--space-10)"><a href="#contact" class="btn-primary">Start Step 1 Now</a></div>
+</div>
+</section>
+
+<!-- Section 8: Pricing Clarity Table -->
+<section class="pricing-table">
+<div class="container">
+<h2 class="section-heading fade-in" style="text-align:center">Transparent Pricing, <em class="em-serif">No Surprises</em></h2>
+<div class="pricing-grid fade-in">
+<div class="pricing-grid__head">Package</div><div class="pricing-grid__head">Price</div><div class="pricing-grid__head">Badge</div>
+<div>Branding Package</div><div style="font-weight:700">₹7,999</div><div><span class="pricing-grid__badge">Most Popular</span></div>
+<div>Website</div><div>Starting ₹19,999</div><div>—</div>
+<div>Retainer</div><div>Starting ₹9,999/mo</div><div>—</div>
+</div>
+<p class="pricing-includes fade-in">✓ Dedicated designer &nbsp;&nbsp;✓ Source files &nbsp;&nbsp;✓ Revisions &nbsp;&nbsp;✓ Commercial rights</p>
+<div style="text-align:center"><a href="#contact" class="btn-primary">Choose Your Package</a></div>
+</div>
+</section>
+
+<!-- Section 9: Objection Handler -->
+<section class="objection">
+<div class="container">
+<h2 class="section-heading fade-in">Why Businesses Choose Us <em class="em-serif">Over Others</em></h2>
+<div class="objection__grid">
+<div class="objection__card fade-in">
+<div class="objection__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+<p class="objection__item-title">Speed</p>
+<p class="objection__item-body">Fixed timelines, no waiting weeks for updates. Your brand ships on schedule, every time.</p>
+</div>
+<div class="objection__card fade-in">
+<div class="objection__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M2 9h20"/><path d="M10 3l-4 6M14 3l4 6"/></svg></div>
+<p class="objection__item-title">Value</p>
+<p class="objection__item-body">Premium quality at startup-friendly pricing. No agency markup, no hidden fees.</p>
+</div>
+<div class="objection__card fade-in">
+<div class="objection__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+<p class="objection__item-title">Consistency</p>
+<p class="objection__item-body">One dedicated team, one visual language across every touchpoint and deliverable.</p>
+</div>
+<div class="objection__card fade-in">
+<div class="objection__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+<p class="objection__item-title">Flexibility</p>
+<p class="objection__item-body">Add retainer, websites, or ads as you grow. We scale with your business needs.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 10: Final CTA -->
+<section class="final-cta" id="contact">
+<div class="container container--default">
+<h2 class="section-heading fade-in">Ready to Build a Brand That <em class="em-serif">Stands Out</em>?</h2>
+<p class="final-cta__body">Your competitors are launching while you're still thinking. Get branding clarity in 7 days.</p>
+<div class="final-cta__btns"><a href="#pricing" class="btn-primary">Get Your Branding Package — ₹7,999</a><a href="mailto:info@heliocenture.com" class="btn-secondary">Schedule Free Consultation</a></div>
+<p class="final-cta__guarantee">If you're not satisfied, we revise until you are.</p>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer__inner">
+<a href="#" class="footer__logo" aria-label="HelioCenture Home"><img src="assets/logo.png" alt="HelioCenture" height="24"></a>
+<div class="footer__contact">info@heliocenture.com &nbsp;|&nbsp; +91 94435 20166</div>
+<nav class="footer__links"><a href="#work">Work</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
+<div class="footer__social">
+<a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+<a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M8 11v5M8 8v.01M12 16v-5a2 2 0 014 0v5"/></svg></a>
+<a href="#" aria-label="Behance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h6a3 3 0 100-6H3v12h6a3.5 3.5 0 100-7M15 8h6M16 16c2.5 0 5-1 5-4s-2.5-4-5-4-4 2-4 4 2 4 4 4z"/></svg></a>
+</div>
+<p class="footer__copy">© 2025 HelioCenture. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<script>
+
+
+// Portfolio filter
+(function(){
+  const pills = document.querySelectorAll('.filter-pill');
+  const items = document.querySelectorAll('.portfolio-item');
+  const grid = document.getElementById('portfolio-grid');
+
+  pills.forEach(function(pill){
+    pill.addEventListener('click', function(){
+      pills.forEach(function(p){ p.classList.remove('active'); });
+      pill.classList.add('active');
+      const filter = pill.getAttribute('data-filter');
+      
+      // Toggle 5-column layout for social media and ads
+      grid.classList.toggle('masonry--condensed', filter === 'social' || filter === 'ads');
+      
+      items.forEach(function(item){
+        item.classList.toggle('hidden', item.getAttribute('data-category') !== filter);
+      });
+    });
+  });
+  // Initialize filter
+  const activePill = document.querySelector('.filter-pill.active');
+  const initialFilter = activePill.getAttribute('data-filter');
+  grid.classList.toggle('masonry--condensed', initialFilter === 'social' || initialFilter === 'ads');
+  
+  items.forEach(function(item){
+    item.classList.toggle('hidden', item.getAttribute('data-category') !== initialFilter);
+  });
+})();
+</script>
+

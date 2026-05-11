@@ -770,9 +770,10 @@
 
     .services__grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: var(--space-6);
-      width: 100%
+      width: 100%;
+      max-width: 840px
     }
 
     .services__grid .card {
@@ -1397,7 +1398,7 @@
   <header class="navbar" role="banner">
     <a href="#" class="navbar__logo" aria-label="HelioCenture Home"><img src="assets/logo.png" alt="HelioCenture"
         height="28"></a>
-    <nav class="navbar__links" role="navigation"><a href="#work">Work</a><a href="#services">Services</a><a
+    <nav class="navbar__links" role="navigation"><a href="#work">Portfolio</a><a href="#services">Services</a><a
         href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
     <a href="#pricing" class="btn-primary navbar__cta">Get Branding</a>
 
@@ -1408,7 +1409,7 @@
     </button>
   </header>
   <div class="mobile-drawer" id="drawer">
-    <a href="#work" onclick="closeMenu()">Work</a>
+    <a href="#work" onclick="closeMenu()">Portfolio</a>
     <a href="#services" onclick="closeMenu()">Services</a>
     <a href="#pricing" onclick="closeMenu()">Pricing</a>
     <a href="#contact" onclick="closeMenu()">Contact</a>
@@ -1424,7 +1425,7 @@
           <p class="hero__sub fade-in">Complete branding package for just ₹7,999. Logo, guidelines, collaterals —
             everything you need to launch confidently or scale faster.</p>
           <div class="hero__btns"><a href="#pricing" class="btn-primary">Get Your Branding Package</a><a href="#work"
-              class="btn-secondary">View Our Work ↓</a></div>
+              class="btn-secondary">View Our Portfolio ↓</a></div>
         </div>
 
         <div class="hero__form fade-in">
@@ -1614,23 +1615,10 @@
           </div>
           <div class="card fade-in">
             <div class="services__icon"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8">
-                <rect x="4" y="4" width="20" height="20" rx="2" />
-                <rect x="4" y="10" width="20" height="8" rx="1" />
-                <rect x="4" y="16" width="20" height="8" rx="1" />
+                <path d="M2 17l12 7 12-7M2 11l12 7 12-7M14 4L2 11l12 7 12-7-12-7z" />
               </svg></div>
-            <h3 class="services__title">Social Media Retainer</h3>
-            <p class="services__body">Unlimited posts & creatives</p><a href="#contact" class="btn-secondary">Explore
-              Retainer Plans →</a>
-          </div>
-          <div class="card fade-in">
-            <div class="services__icon"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M14 3v8l6 3" />
-                <circle cx="14" cy="14" r="11" />
-                <path d="M8 22l-3 4M20 22l3 4" />
-              </svg></div>
-            <h3 class="services__title">Ad Creative Design</h3>
-            <p class="services__body">Meta, Google, LinkedIn ads</p><a href="#contact" class="btn-secondary">Request Ad
-              Samples →</a>
+            <h3 class="services__title">Brand Identity Design</h3>
+            <p class="services__body">Complete visual systems & guidelines</p><a href="#contact" class="btn-secondary">Explore Branding →</a>
           </div>
         </div>
       </div>
@@ -1639,7 +1627,7 @@
     <!-- Section 5: Portfolio -->
     <section class="portfolio" id="work">
       <div class="container">
-        <h2 class="section-heading fade-in">Brands we've <em class="em-serif" style="color: var(--color-accent)">Built</em></h2>
+        <h2 class="section-heading fade-in">Our <em class="em-serif" style="color: var(--color-accent)">Portfolio</em></h2>
         <div class="portfolio__filters" role="group" aria-label="Filter portfolio">
           <button class="filter-pill active" data-filter="branding">Logos</button>
           <button class="filter-pill" data-filter="websites">Websites</button>
@@ -2136,7 +2124,7 @@
         <a href="#" class="footer__logo" aria-label="HelioCenture Home"><img src="assets/logo.png" alt="HelioCenture"
             height="24"></a>
         <div class="footer__contact">info@heliocenture.com &nbsp;|&nbsp; +91 94435 20166</div>
-        <nav class="footer__links"><a href="#work">Work</a><a href="#services">Services</a><a
+        <nav class="footer__links"><a href="#work">Portfolio</a><a href="#services">Services</a><a
             href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
         <div class="footer__social">
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"

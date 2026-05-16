@@ -120,7 +120,8 @@
     .em-serif {
       font-family: var(--font-display);
       font-style: italic;
-      font-weight: 400
+      font-weight: 400;
+      color: var(--color-accent)
     }
 
     .section-heading {
@@ -676,8 +677,6 @@
     }
 
     .pricing-card {
-      max-width: 560px;
-      margin-inline: auto;
       background: var(--color-surface);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-2xl);
@@ -754,6 +753,43 @@
       width: 18px;
       height: 18px;
       color: var(--color-accent)
+    }
+
+    .pricing-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      align-items: stretch;
+      max-width: 1200px;
+      margin-inline: auto;
+    }
+
+    .pricing-plan {
+      height: 100%;
+    }
+
+    .pricing-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-8);
+    }
+
+    .pricing-card__list {
+      flex-grow: 1;
+    }
+
+    @media(max-width: 1024px) {
+      .pricing-content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 768px) {
+      .pricing-content {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+      }
     }
 
     /* === SERVICES === */
@@ -1473,9 +1509,8 @@
     <section class="hero" id="hero">
       <div class="container">
         <div class="hero__content">
-          <h1 class="hero__headline fade-in">Your Brand Deserves <em class="em-serif">Better Than Average</em></h1>
-          <p class="hero__sub fade-in">Complete branding package for just ₹7,999. Logo, guidelines, collaterals —
-            everything you need to launch confidently or scale faster.</p>
+          <h1 class="hero__headline fade-in">We <em class="em-serif">Soulfully craft</em> Premium Brand Identities That Make Customers Trust You Instantly</h1>
+          <p class="hero__sub fade-in">Delivered in 8 to 10 Days — Or 100% Money Back Guaranteed.</p>
           <div class="hero__btns"><a href="#pricing" class="btn-primary">Get Your Branding Package</a><a href="#work"
               class="btn-secondary">View Our Portfolio ↓</a></div>
         </div>
@@ -1488,7 +1523,7 @@
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
             <h3 class="contact-form__title">Get a Free Quote</h3>
-            <p class="contact-form__subtitle">Transform your brand in 7 days.</p>
+            <p class="contact-form__subtitle">Transform your brand in 8 to 10 days.</p>
             <div class="form-group">
               <label for="hero-name">Name *</label>
               <input type="text" id="hero-name" name="name" placeholder="Your Name" required>
@@ -1557,51 +1592,40 @@
       <div class="container">
         <div class="problem__inner">
           <div class="problem__text">
-            <h2 class="section-heading fade-in">Building a Brand Shouldn't Feel <em class="em-serif">This Hard</em></h2>
-            <p class="problem__body">Most businesses waste months and lakhs on scattered freelancers, inconsistent
-              designs, and endless revisions. You need clarity, speed, and professional quality — without the agency
-              bloat.</p>
+            <h2 class="section-heading fade-in">Why Businesses <br><em class="em-serif">Trust Us?</em></h2>
+            <p class="problem__body">Scaling your brand shouldn't be a gamble. We provide senior-level strategy, lightning-fast execution, and a zero-risk guarantee to ensure your business stands out and sells.</p>
             <a href="#pricing" class="btn-primary">Start Your Branding Journey</a>
           </div>
           <div class="problem__features fade-in">
+            <!-- Feature 1: Expertise -->
             <div class="problem__feature">
-              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="4" width="18" height="18" rx="2" />
-                  <path d="M16 2v4M8 2v4M3 10h18" />
-                  <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" />
-                </svg></div>
-              <div class="problem__feature-content"><span class="problem__feature-title">Complete brand identity in 7–10
-                  days</span><span class="problem__feature-desc">Fast turnaround without cutting corners</span></div>
+              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+              <div class="problem__feature-content"><span class="problem__feature-title">20 Years of Expertise</span><span class="problem__feature-desc">Senior-level strategy only.</span></div>
             </div>
+            <!-- Feature 2: Sprint -->
             <div class="problem__feature">
-              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" />
-                  <circle cx="7" cy="7" r="1" fill="currentColor" />
-                </svg></div>
-              <div class="problem__feature-content"><span class="problem__feature-title">One fixed price, zero hidden
-                  costs</span><span class="problem__feature-desc">₹7,999 all-inclusive — no surprises</span></div>
+              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div>
+              <div class="problem__feature-content"><span class="problem__feature-title">7-Day Sprint</span><span class="problem__feature-desc">We work at the speed of business.</span></div>
             </div>
+            <!-- Feature 3: Brands -->
             <div class="problem__feature">
-              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="3" width="7" height="7" rx="1" />
-                  <rect x="14" y="3" width="7" height="7" rx="1" />
-                  <rect x="3" y="14" width="7" height="7" rx="1" />
-                  <rect x="14" y="14" width="7" height="7" rx="1" />
-                </svg></div>
-              <div class="problem__feature-content"><span class="problem__feature-title">Design consistency across
-                  touchpoints</span><span class="problem__feature-desc">Logo, cards, letterhead — one unified
-                  look</span></div>
+              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+              <div class="problem__feature-content"><span class="problem__feature-title">50+ Brands Launched</span><span class="problem__feature-desc">We know what actually sells.</span></div>
             </div>
+            <!-- Feature 4: Risk Reversal -->
             <div class="problem__feature">
-              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                </svg></div>
-              <div class="problem__feature-content"><span class="problem__feature-title">Retainer flexibility for
-                  growth</span><span class="problem__feature-desc">Scale up with websites, social, and ads</span></div>
+              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+              <div class="problem__feature-content"><span class="problem__feature-title">100% Risk Reversal</span><span class="problem__feature-desc">We miss the deadline? You pay ₹0.</span></div>
+            </div>
+            <!-- Feature 5: Feedback -->
+            <div class="problem__feature">
+              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+              <div class="problem__feature-content"><span class="problem__feature-title">24 Hours Feedback Loop</span><span class="problem__feature-desc">Dedicated Point of contact.</span></div>
+            </div>
+            <!-- Feature 6: Ownership -->
+            <div class="problem__feature">
+              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
+              <div class="problem__feature-content"><span class="problem__feature-title">Full Ownership</span><span class="problem__feature-desc">You own the files and the rights.</span></div>
             </div>
           </div>
         </div>
@@ -1611,46 +1635,67 @@
     <!-- Section 3: Flagship Pricing -->
     <section class="pricing-section" id="pricing">
       <div class="container">
-        <h2 class="section-heading fade-in" style="text-align:center">Everything You Need to <em class="em-serif">Launch
-            Strong</em></h2>
-        <div class="pricing-card fade-in">
-          <span class="pricing-card__badge">Most Popular</span>
-          <div class="pricing-card__price">₹7,999</div>
-          <ul class="pricing-card__list">
-            <li><svg viewBox="0 0 20 20" fill="none">
-                <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>Custom Logo Design — 3 concepts + 2 revisions</li>
-            <li><svg viewBox="0 0 20 20" fill="none">
-                <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>Brand Guidelines — Colours, fonts, usage rules</li>
-            <li><svg viewBox="0 0 20 20" fill="none">
-                <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>Business Card Design — Print-ready files</li>
-            <li><svg viewBox="0 0 20 20" fill="none">
-                <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>Letterhead Design</li>
-            <li><svg viewBox="0 0 20 20" fill="none">
-                <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>Envelope Design</li>
-            <li><svg viewBox="0 0 20 20" fill="none">
-                <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>4-Page Brochure or Catalog</li>
-          </ul>
-          <p class="pricing-card__delivery">7–10 working days &nbsp;|&nbsp; Format: Source files + PDFs</p>
-          <a href="#contact" class="btn-primary">Claim Your Package Now</a>
-          <div class="pricing-card__guarantee"><svg viewBox="0 0 20 20" fill="none">
-              <path
-                d="M10 1l2.5 3H16a1 1 0 011 1v3.5L19.5 11 17 13.5V17a1 1 0 01-1 1h-3.5L10 20.5 7.5 18H4a1 1 0 01-1-1v-3.5L.5 11 3 8.5V5a1 1 0 011-1h3.5L10 1z"
-                stroke="currentColor" stroke-width="1.5" />
-              <path d="M7 11l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>100% Satisfaction Guaranteed</div>
+        <h2 class="section-heading fade-in" style="text-align:center">Choose Your <em class="em-serif">Growth Plan</em></h2>
+        <div class="pricing-content fade-in">
+          <!-- Plan 1: Starter Kit -->
+          <div class="pricing-plan" id="plan-starter">
+            <div class="pricing-card">
+              <span class="pricing-card__badge">Perfect for Startups</span>
+              <div class="pricing-card__price">₹7,999</div>
+              <ul class="pricing-card__list">
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>3 Logo rough drafts - samples</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Logo (up to 3 concepts, 3 revisions)</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Business Card (Up to 3 cards - People)</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Letterhead (1 Design Variations)</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Envelope (1 Design Variation)</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>HD Square Profile Image (Social Media Ready)</li>
+              </ul>
+              <p class="pricing-card__delivery">8–10 working days &nbsp;|&nbsp; Format: Source files + PDFs</p>
+              <a href="#contact" class="btn-primary">Claim Starter Kit</a>
+              <div class="pricing-card__guarantee"><svg viewBox="0 0 20 20" fill="none"><path d="M10 1l2.5 3H16a1 1 0 011 1v3.5L19.5 11 17 13.5V17a1 1 0 01-1 1h-3.5L10 20.5 7.5 18H4a1 1 0 01-1-1v-3.5L.5 11 3 8.5V5a1 1 0 011-1h3.5L10 1z" stroke="currentColor" stroke-width="1.5"/><path d="M7 11l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>100% Satisfaction Guaranteed</div>
+            </div>
+          </div>
+
+          <!-- Plan 2: Master Kit -->
+          <div class="pricing-plan" id="plan-master">
+            <div class="pricing-card">
+              <span class="pricing-card__badge">Most Popular</span>
+              <div class="pricing-card__price">₹19,999</div>
+              <ul class="pricing-card__list">
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>5 Logo rough drafts - samples</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Logo (up to 5 concepts, 5 revisions)</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Business Card (Up to 6 cards - People)</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Letterhead (Up to 3 Variations)</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Brand Guideline (Rules, typography, placements)</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Brochure / Catalogue (Up to 4 pages)</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Company Pitch Deck (Up to 12 slides)</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>One-page Landing Page/Website</li>
+              </ul>
+              <p class="pricing-card__delivery">10–14 working days &nbsp;|&nbsp; Content writing Assistance included</p>
+              <a href="#contact" class="btn-primary">Claim Master Kit</a>
+              <div class="pricing-card__guarantee"><svg viewBox="0 0 20 20" fill="none"><path d="M10 1l2.5 3H16a1 1 0 011 1v3.5L19.5 11 17 13.5V17a1 1 0 01-1 1h-3.5L10 20.5 7.5 18H4a1 1 0 01-1-1v-3.5L.5 11 3 8.5V5a1 1 0 011-1h3.5L10 1z" stroke="currentColor" stroke-width="1.5"/><path d="M7 11l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>100% Satisfaction Guaranteed</div>
+            </div>
+          </div>
+
+          <!-- Plan 3: Full Suite Website -->
+          <div class="pricing-plan" id="plan-website">
+            <div class="pricing-card">
+              <span class="pricing-card__badge">Digital Dominance</span>
+              <div class="pricing-card__price">₹20,000<span style="font-size: var(--text-sm); font-weight: 500; color: var(--color-text-muted)"> onwards</span></div>
+              <ul class="pricing-card__list">
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>1 - 10 Pages (Custom Design)</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>100% Mobile & Tablet Friendly</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>1 Contact Us Form with Lead Tracking</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Online Chat Plugin Integration</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free Technical Support for 1 Year</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>HD Image Support (AI Optimized)</li>
+                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Content writing Assistance</li>
+              </ul>
+              <p class="pricing-card__delivery">15–20 working days &nbsp;|&nbsp; SEO Ready & Super Fast</p>
+              <a href="#contact" class="btn-primary">Get Website Quote</a>
+              <div class="pricing-card__guarantee"><svg viewBox="0 0 20 20" fill="none"><path d="M10 1l2.5 3H16a1 1 0 011 1v3.5L19.5 11 17 13.5V17a1 1 0 01-1 1h-3.5L10 20.5 7.5 18H4a1 1 0 01-1-1v-3.5L.5 11 3 8.5V5a1 1 0 011-1h3.5L10 1z" stroke="currentColor" stroke-width="1.5"/><path d="M7 11l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>100% Satisfaction Guaranteed</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1692,59 +1737,25 @@
         </div>
         <div class="masonry" id="portfolio-grid">
           <!-- Branding -->
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Bubble%20Organic%20Logo.png" alt="Bubble Organic" width="600" height="600"><span
-              class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/Cinnamon%20Rolls.png"
-              alt="Cinnamon Rolls" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Eskay%20packing%20Logo.png" alt="Eskay Packing" width="600" height="600"><span
-              class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Flabour%20Hub%20Logo.png" alt="Flabour Hub" width="600" height="600" loading="lazy"
-              decoding="async"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Gows%20Bai%20Kari%20Kadai%20Logo.png" alt="Gows Bai Kari Kadai" width="600"
-              height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Indian%20Institute%20of%20Catering%20Logo.png" alt="Indian Institute of Catering"
-              width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Mabia%20Boutique%20Logo.png" alt="Mabia Boutique" width="600" height="600"><span
-              class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Madras%20Diabetes%20Center%20Logo.png" alt="Madras Diabetes Center" width="600"
-              height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Sarvam%20Fresh%20Logo.png" alt="Sarvam Fresh" width="600" height="600"><span
-              class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Serene%20Tea%20Logo.png" alt="Serene Tea" width="600" height="600" loading="lazy"
-              decoding="async"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Slurp%20Club%20Logo.png" alt="Slurp Club" width="600" height="600" loading="lazy"
-              decoding="async"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Tea%20Master%20Logo.png" alt="Tea Master" width="600" height="600" loading="lazy"
-              decoding="async"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Aargee%20Gold.png" alt="Aargee Gold" width="600" height="600" loading="lazy"
-              decoding="async"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Matsyaa%20Infotech.png" alt="Matsyaa Infotech" width="600" height="600"
-              loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/SPS%20Oil.png"
-              alt="SPS Oil" width="600" height="600" loading="lazy" decoding="async"><span
-              class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20Logos/Stanso.png"
-              alt="Stanso" width="600" height="600" loading="lazy" decoding="async"><span
-              class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Strategic%20Communications.png" alt="Strategic Communications" width="600"
-              height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img
-              src="Portfolio%20Logos/Vedhant%20Oil.png" alt="Vedhant Oil" width="600" height="600" loading="lazy"
-              decoding="async"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Anjappar%2060%20Logo.png" alt="Anjappar 60 Logo" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/8.png" alt="Branding Logo 8" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/9.png" alt="Branding Logo 9" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/10.png" alt="Branding Logo 10" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/11.png" alt="Branding Logo 11" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/12.png" alt="Branding Logo 12" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/13.png" alt="Branding Logo 13" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/14.png" alt="Branding Logo 14" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/15.png" alt="Branding Logo 15" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/16.png" alt="Branding Logo 16" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/17.png" alt="Branding Logo 17" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/18.png" alt="Branding Logo 18" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Aargee%20Gold.png" alt="Aargee Gold" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Matsyaa%20Infotech.png" alt="Matsyaa Infotech" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/SPS%20Oil.png" alt="SPS Oil" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Serene%20Tea.png" alt="Serene Tea" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Stanso.png" alt="Stanso" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Strategic%20Communications.png" alt="Strategic Communications" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Vedhant%20Oil.png" alt="Vedhant Oil" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
 
 
           <!-- Websites -->
@@ -1981,11 +1992,11 @@
         <div class="final-cta__text">
           <h2 class="section-heading fade-in">Ready to Build a Brand That <em class="em-serif">Stands Out</em>?</h2>
           <p class="final-cta__body">Your competitors are launching while you're still thinking. Get branding clarity in
-            7
+            8 to 10
             days.</p>
           <div class="final-cta__btns"><a href="#pricing" class="btn-primary">Get Your Branding Package — ₹7,999</a><a
               href="mailto:info@heliocenture.com" class="btn-secondary">Schedule Free Consultation</a></div>
-          <p class="final-cta__guarantee">If you're not satisfied, we revise until you are.</p>
+          <p class="final-cta__guarantee">100% Money Back Guaranteed — If you're not satisfied, we revise until you are.</p>
         </div>
 
         <div class="final-cta__form fade-in">
@@ -2089,6 +2100,7 @@
       btn.classList.remove('is-active');
       document.body.style.overflow = '';
     }
+
 
 
 

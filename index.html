@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HelioCenture — Premium Branding & Design Studio</title>
   <meta name="description"
-    content="Complete branding package for ₹7,999. Logo, guidelines, collaterals — everything you need to launch confidently.">
+    content="Complete branding packages starting at ₹7,999. Logo, guidelines, collaterals — everything you need to launch confidently.">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -241,7 +241,7 @@
       border-radius: var(--radius-full);
       box-shadow: var(--shadow-md);
       border: 1px solid var(--color-border);
-      padding: var(--space-2) var(--space-3);
+      padding: 6px 6px 6px 20px;
       display: flex;
       align-items: center;
       gap: var(--space-2);
@@ -252,7 +252,7 @@
     .navbar__logo {
       display: flex;
       align-items: center;
-      padding-left: var(--space-2)
+      padding-left: 0;
     }
 
     .navbar__logo img {
@@ -287,9 +287,13 @@
     }
 
     .navbar__cta {
-      margin-left: var(--space-1);
+      margin-left: var(--space-2);
       white-space: nowrap;
-      flex-shrink: 0
+      flex-shrink: 0;
+      padding: 8px 16px;
+      min-height: auto;
+      font-size: 0.875rem;
+      border-radius: var(--radius-full);
     }
 
     .navbar__theme-toggle {
@@ -396,6 +400,9 @@
     }
 
     @media(max-width:768px) {
+      .navbar {
+        padding: 6px 12px 6px 20px;
+      }
 
       .navbar__links,
       .navbar__cta {
@@ -403,7 +410,8 @@
       }
 
       .navbar__hamburger {
-        display: flex
+        display: flex;
+        margin-right: -4px;
       }
     }
 
@@ -446,6 +454,51 @@
       margin-bottom: var(--space-8);
       line-height: 1.6;
       margin-inline: 0;
+    }
+
+    .hero__guarantee-wrapper {
+      position: relative;
+      display: inline-flex;
+      padding: 2px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: var(--space-8);
+      box-shadow: 0 0 20px color-mix(in srgb, var(--color-accent) 25%, transparent);
+    }
+
+    .hero__guarantee-wrapper::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(transparent, transparent, transparent, var(--color-accent));
+      animation: rotate-glow 3s linear infinite;
+    }
+
+    .hero__guarantee-inner {
+      position: relative;
+      background: var(--color-surface);
+      border-radius: calc(var(--radius-lg) - 2px);
+      padding: var(--space-3) var(--space-5);
+      z-index: 1;
+      font-weight: 700;
+      font-size: var(--text-base);
+      color: var(--color-text);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    @keyframes rotate-glow {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     .hero__btns {
@@ -576,6 +629,11 @@
         font-size: 0.9rem;
       }
 
+      .hero__guarantee-inner {
+        font-size: 0.9rem;
+        padding: var(--space-2) var(--space-4);
+      }
+
       .hero__btns {
         flex-direction: row;
         flex-wrap: nowrap;
@@ -703,6 +761,14 @@
       padding: var(--space-1) var(--space-3);
       border-radius: var(--radius-full);
       margin-bottom: var(--space-4)
+    }
+
+    .pricing-card__title {
+      font-size: var(--text-lg);
+      font-weight: 700;
+      margin-top: var(--space-2);
+      margin-bottom: var(--space-2);
+      color: var(--color-text);
     }
 
     .pricing-card__price {
@@ -957,7 +1023,8 @@
     /* === TESTIMONIALS === */
     .testimonials {
       background: var(--color-bg);
-      text-align: center
+      text-align: center;
+      padding-bottom: var(--space-8);
     }
 
     .testimonials .container {
@@ -970,7 +1037,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: var(--space-6);
-      margin-bottom: var(--space-12);
+      margin-bottom: var(--space-6);
       width: 100%
     }
 
@@ -1288,7 +1355,8 @@
     /* === FINAL CTA === */
     .final-cta {
       background: var(--color-bg);
-      padding-block: clamp(var(--space-20), 10vw, 8rem)
+      padding-top: clamp(var(--space-8), 4vw, var(--space-12));
+      padding-bottom: clamp(var(--space-20), 10vw, 8rem);
     }
 
     .final-cta .container {
@@ -1349,6 +1417,10 @@
         margin-bottom: var(--space-6);
       }
 
+      .hero__guarantee-wrapper {
+        margin-bottom: var(--space-6);
+      }
+
       .hero__btns,
       .final-cta__btns {
         justify-content: center;
@@ -1361,11 +1433,54 @@
       .contact-form {
         margin-inline: auto;
       }
+
+      .final-cta__guarantee-wrapper {
+        margin-top: var(--space-4);
+        margin-bottom: var(--space-6);
+        margin-inline: auto;
+      }
+
+      .final-cta__guarantee-inner {
+        font-size: 0.9rem;
+        padding: var(--space-2) var(--space-4);
+      }
     }
 
-    .final-cta__guarantee {
-      font-size: var(--text-sm);
-      color: var(--color-text-muted)
+    .final-cta__guarantee-wrapper {
+      position: relative;
+      display: inline-flex;
+      padding: 2px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: var(--space-6);
+      box-shadow: 0 0 20px color-mix(in srgb, var(--color-accent) 25%, transparent);
+    }
+
+    .final-cta__guarantee-wrapper::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(transparent, transparent, transparent, var(--color-accent));
+      animation: rotate-glow 3s linear infinite;
+    }
+
+    .final-cta__guarantee-inner {
+      position: relative;
+      background: var(--color-surface);
+      border-radius: calc(var(--radius-lg) - 2px);
+      padding: var(--space-3) var(--space-5);
+      z-index: 1;
+      font-weight: 700;
+      font-size: var(--text-base);
+      color: var(--color-text);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      line-height: 1.4;
+      text-align: left;
     }
 
     /* === FOOTER === */
@@ -1450,7 +1565,7 @@
       right: var(--space-6);
       width: 60px;
       height: 60px;
-      background-color: var(--color-accent);
+      background-color: #25D366;
       border-radius: var(--radius-full);
       display: flex;
       align-items: center;
@@ -1464,8 +1579,8 @@
 
     .floating-whatsapp:hover {
       transform: translateY(-4px) scale(1.05);
-      background-color: var(--color-accent-hover);
-      box-shadow: 0 16px 32px rgba(228, 87, 46, 0.3);
+      background-color: #128C7E;
+      box-shadow: 0 16px 32px rgba(37, 211, 102, 0.3);
       color: #fff;
     }
 
@@ -1475,6 +1590,37 @@
       fill: currentColor;
     }
 
+    /* === PHONE FLOATING BUTTON === */
+    .floating-phone {
+      position: fixed;
+      bottom: calc(var(--space-6) + 60px + var(--space-3));
+      right: var(--space-6);
+      width: 60px;
+      height: 60px;
+      background-color: var(--color-accent);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      box-shadow: var(--shadow-lg);
+      z-index: 1000;
+      transition: transform 300ms var(--ease-spring), background-color var(--transition), box-shadow var(--transition);
+      text-decoration: none;
+    }
+
+    .floating-phone:hover {
+      transform: translateY(-4px) scale(1.05);
+      background-color: var(--color-accent-hover);
+      box-shadow: 0 16px 32px rgba(228, 87, 46, 0.3);
+      color: #fff;
+    }
+
+    .floating-phone svg {
+      width: 28px;
+      height: 28px;
+    }
+
     @media (max-width: 640px) {
       .floating-whatsapp {
         bottom: var(--space-4);
@@ -1482,9 +1628,22 @@
         width: 52px;
         height: 52px;
       }
+
       .floating-whatsapp svg {
         width: 28px;
         height: 28px;
+      }
+
+      .floating-phone {
+        bottom: calc(var(--space-4) + 52px + var(--space-2));
+        right: var(--space-4);
+        width: 52px;
+        height: 52px;
+      }
+
+      .floating-phone svg {
+        width: 24px;
+        height: 24px;
       }
     }
   </style>
@@ -1496,8 +1655,8 @@
   <header class="navbar" role="banner">
     <a href="#" class="navbar__logo" aria-label="HelioCenture Home"><img src="assets/logo.png" alt="HelioCenture"
         height="28"></a>
-    <nav class="navbar__links" role="navigation"><a href="#work">Portfolio</a><a href="#services">Services</a><a
-        href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
+    <nav class="navbar__links" role="navigation"><a href="#work">Portfolio</a><a href="#pricing">Pricing</a><a
+        href="#contact">Contact</a></nav>
     <a href="#pricing" class="btn-primary navbar__cta">Get Branding</a>
 
     <button id="hamburger-btn" class="navbar__hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
@@ -1508,7 +1667,6 @@
   </header>
   <div class="mobile-drawer" id="drawer">
     <a href="#work" onclick="closeMenu()">Portfolio</a>
-    <a href="#services" onclick="closeMenu()">Services</a>
     <a href="#pricing" onclick="closeMenu()">Pricing</a>
     <a href="#contact" onclick="closeMenu()">Contact</a>
     <a href="#pricing" class="btn-primary" onclick="closeMenu()">Get Branding</a>
@@ -1519,8 +1677,18 @@
     <section class="hero" id="hero">
       <div class="container">
         <div class="hero__content">
-          <h1 class="hero__headline fade-in">We <em class="em-serif">Soulfully craft</em> Premium Brand Identities That Make Customers Trust You Instantly</h1>
-          <p class="hero__sub fade-in">Delivered in 8 to 10 Days — Or 100% Money Back Guaranteed.</p>
+          <h1 class="hero__headline fade-in">We <em class="em-serif">Soulfully craft</em> Premium Brand Identities That
+            Make Customers Trust You Instantly</h1>
+          <div class="hero__guarantee-wrapper fade-in">
+            <div class="hero__guarantee-inner">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent)">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              Delivered in 8 to 10 Days or Money Back Guarantee
+            </div>
+          </div>
           <div class="hero__btns"><a href="#pricing" class="btn-primary">Get Your Branding Package</a><a href="#work"
               class="btn-secondary">View Our Portfolio ↓</a></div>
         </div>
@@ -1555,16 +1723,16 @@
             <div class="form-group">
               <label for="hero-service">Service Needed</label>
               <select id="hero-service" name="service">
-                <option value="Logo">Logo Design</option>
-                <option value="Website">Website Development</option>
-                <option value="Creative Designs">Creative Designs</option>
+                <option value="Logo Package">Logo Package</option>
+                <option value="Branding Package">Branding Package</option>
+                <option value="Website Package">Website Package</option>
               </select>
             </div>
             <div class="form-group">
               <label for="hero-message">Message</label>
               <textarea id="hero-message" name="message" placeholder="How can we help?" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn-primary">Send Inquiry</button>
+            <button type="submit" class="btn-primary">Contact Us</button>
           </form>
         </div>
 
@@ -1603,39 +1771,70 @@
         <div class="problem__inner">
           <div class="problem__text">
             <h2 class="section-heading fade-in">Why Businesses <br><em class="em-serif">Trust Us?</em></h2>
-            <p class="problem__body">Scaling your brand shouldn't be a gamble. We provide senior-level strategy, lightning-fast execution, and a zero-risk guarantee to ensure your business stands out and sells.</p>
+            <p class="problem__body">Scaling your brand shouldn't be a gamble. We provide senior-level strategy,
+              lightning-fast execution, and a zero-risk guarantee to ensure your business stands out and sells.</p>
             <a href="#pricing" class="btn-primary">Start Your Branding Journey</a>
           </div>
           <div class="problem__features fade-in">
             <!-- Feature 1: Expertise -->
             <div class="problem__feature">
-              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
-              <div class="problem__feature-content"><span class="problem__feature-title">20 Years of Expertise</span><span class="problem__feature-desc">Senior-level strategy only.</span></div>
+              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg></div>
+              <div class="problem__feature-content"><span class="problem__feature-title">20 Years of
+                  Expertise</span><span class="problem__feature-desc">Senior-level strategy only.</span></div>
             </div>
             <!-- Feature 2: Sprint -->
             <div class="problem__feature">
-              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div>
-              <div class="problem__feature-content"><span class="problem__feature-title">7-Day Sprint</span><span class="problem__feature-desc">We work at the speed of business.</span></div>
+              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg></div>
+              <div class="problem__feature-content"><span class="problem__feature-title">7-Day Sprint</span><span
+                  class="problem__feature-desc">We work at the speed of business.</span></div>
             </div>
             <!-- Feature 3: Brands -->
             <div class="problem__feature">
-              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
-              <div class="problem__feature-content"><span class="problem__feature-title">50+ Brands Launched</span><span class="problem__feature-desc">We know what actually sells.</span></div>
+              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                  <path d="M4 22h16"></path>
+                  <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                  <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                  <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                </svg></div>
+              <div class="problem__feature-content"><span class="problem__feature-title">50+ Brands Launched</span><span
+                  class="problem__feature-desc">We know what actually sells.</span></div>
             </div>
             <!-- Feature 4: Risk Reversal -->
             <div class="problem__feature">
-              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-              <div class="problem__feature-content"><span class="problem__feature-title">100% Risk Reversal</span><span class="problem__feature-desc">We miss the deadline? You pay ₹0.</span></div>
+              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg></div>
+              <div class="problem__feature-content"><span class="problem__feature-title">100% Risk Reversal</span><span
+                  class="problem__feature-desc">We miss the deadline? You pay ₹0.</span></div>
             </div>
             <!-- Feature 5: Feedback -->
             <div class="problem__feature">
-              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
-              <div class="problem__feature-content"><span class="problem__feature-title">24 Hours Feedback Loop</span><span class="problem__feature-desc">Dedicated Point of contact.</span></div>
+              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg></div>
+              <div class="problem__feature-content"><span class="problem__feature-title">24 Hours Feedback
+                  Loop</span><span class="problem__feature-desc">Dedicated Point of contact.</span></div>
             </div>
             <!-- Feature 6: Ownership -->
             <div class="problem__feature">
-              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
-              <div class="problem__feature-content"><span class="problem__feature-title">Full Ownership</span><span class="problem__feature-desc">You own the files and the rights.</span></div>
+              <div class="problem__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg></div>
+              <div class="problem__feature-content"><span class="problem__feature-title">Full Ownership</span><span
+                  class="problem__feature-desc">You own the files and the rights.</span></div>
             </div>
           </div>
         </div>
@@ -1645,24 +1844,50 @@
     <!-- Section 3: Flagship Pricing -->
     <section class="pricing-section" id="pricing">
       <div class="container">
-        <h2 class="section-heading fade-in" style="text-align:center">Choose Your <em class="em-serif">Growth Plan</em></h2>
+        <h2 class="section-heading fade-in" style="text-align:center">Choose Your <em class="em-serif">Growth Plan</em>
+        </h2>
         <div class="pricing-content fade-in">
           <!-- Plan 1: Starter Kit -->
           <div class="pricing-plan" id="plan-starter">
             <div class="pricing-card">
               <span class="pricing-card__badge">Perfect for Startups</span>
+              <h3 class="pricing-card__title">Logo Package</h3>
               <div class="pricing-card__price">₹7,999</div>
               <ul class="pricing-card__list">
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>3 Logo rough drafts - samples</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Logo (up to 3 concepts, 3 revisions)</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Business Card (Up to 3 cards - People)</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Letterhead (1 Design Variations)</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Envelope (1 Design Variation)</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>HD Square Profile Image (Social Media Ready)</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>3 Logo rough drafts - samples</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>Logo (up to 3 concepts, 3 revisions)</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>Business Card (Up to 3 cards - People)</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>Letterhead (1 Design Variations)</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>Envelope (1 Design Variation)</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>HD Square Profile Image (Social Media Ready)</li>
               </ul>
               <p class="pricing-card__delivery">8–10 working days &nbsp;|&nbsp; Format: Source files + PDFs</p>
-              <a href="#contact" class="btn-primary">Claim Starter Kit</a>
-              <div class="pricing-card__guarantee"><svg viewBox="0 0 20 20" fill="none"><path d="M10 1l2.5 3H16a1 1 0 011 1v3.5L19.5 11 17 13.5V17a1 1 0 01-1 1h-3.5L10 20.5 7.5 18H4a1 1 0 01-1-1v-3.5L.5 11 3 8.5V5a1 1 0 011-1h3.5L10 1z" stroke="currentColor" stroke-width="1.5"/><path d="M7 11l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>100% Satisfaction Guaranteed</div>
+              <a href="#contact" class="btn-primary">Claim Logo Package</a>
+              <div class="pricing-card__guarantee"><svg viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M10 1l2.5 3H16a1 1 0 011 1v3.5L19.5 11 17 13.5V17a1 1 0 01-1 1h-3.5L10 20.5 7.5 18H4a1 1 0 01-1-1v-3.5L.5 11 3 8.5V5a1 1 0 011-1h3.5L10 1z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path d="M7 11l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>100% Satisfaction Guaranteed</div>
             </div>
           </div>
 
@@ -1670,20 +1895,51 @@
           <div class="pricing-plan" id="plan-master">
             <div class="pricing-card">
               <span class="pricing-card__badge">Most Popular</span>
+              <h3 class="pricing-card__title">Branding Package</h3>
               <div class="pricing-card__price">₹19,999</div>
               <ul class="pricing-card__list">
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>5 Logo rough drafts - samples</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Logo (up to 5 concepts, 5 revisions)</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Business Card (Up to 6 cards - People)</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Letterhead (Up to 3 Variations)</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Brand Guideline (Rules, typography, placements)</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Brochure / Catalogue (Up to 4 pages)</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Company Pitch Deck (Up to 12 slides)</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>One-page Landing Page/Website</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>5 Logo rough drafts - samples</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>Logo (up to 5 concepts, 5 revisions)</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>Business Card (Up to 6 cards - People)</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>Letterhead (Up to 3 Variations)</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>Brand Guideline (Rules, typography, placements)</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>Brochure / Catalogue (Up to 4 pages)</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>Company Pitch Deck (Up to 12 slides)</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>One-page Landing Page/Website</li>
               </ul>
               <p class="pricing-card__delivery">10–14 working days &nbsp;|&nbsp; Content writing Assistance included</p>
-              <a href="#contact" class="btn-primary">Claim Master Kit</a>
-              <div class="pricing-card__guarantee"><svg viewBox="0 0 20 20" fill="none"><path d="M10 1l2.5 3H16a1 1 0 011 1v3.5L19.5 11 17 13.5V17a1 1 0 01-1 1h-3.5L10 20.5 7.5 18H4a1 1 0 01-1-1v-3.5L.5 11 3 8.5V5a1 1 0 011-1h3.5L10 1z" stroke="currentColor" stroke-width="1.5"/><path d="M7 11l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>100% Satisfaction Guaranteed</div>
+              <a href="#contact" class="btn-primary">Claim Branding Package</a>
+              <div class="pricing-card__guarantee"><svg viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M10 1l2.5 3H16a1 1 0 011 1v3.5L19.5 11 17 13.5V17a1 1 0 01-1 1h-3.5L10 20.5 7.5 18H4a1 1 0 01-1-1v-3.5L.5 11 3 8.5V5a1 1 0 011-1h3.5L10 1z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path d="M7 11l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>100% Satisfaction Guaranteed</div>
             </div>
           </div>
 
@@ -1691,50 +1947,56 @@
           <div class="pricing-plan" id="plan-website">
             <div class="pricing-card">
               <span class="pricing-card__badge">Digital Dominance</span>
-              <div class="pricing-card__price">₹20,000<span style="font-size: var(--text-sm); font-weight: 500; color: var(--color-text-muted)"> onwards</span></div>
+              <h3 class="pricing-card__title">Website Package</h3>
+              <div class="pricing-card__price">₹20,000<span
+                  style="font-size: var(--text-sm); font-weight: 500; color: var(--color-text-muted)"> onwards</span>
+              </div>
               <ul class="pricing-card__list">
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>1 - 10 Pages (Custom Design)</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>100% Mobile & Tablet Friendly</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>1 Contact Us Form with Lead Tracking</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Online Chat Plugin Integration</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free Technical Support for 1 Year</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>HD Image Support (AI Optimized)</li>
-                <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Content writing Assistance</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>1 - 10 Pages (Custom Design)</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>100% Mobile & Tablet Friendly</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>1 Contact Us Form with Lead Tracking</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>Online Chat Plugin Integration</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>Free Technical Support for 1 Year</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>HD Image Support (AI Optimized)</li>
+                <li><svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 10l4 4L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>Content writing Assistance</li>
               </ul>
               <p class="pricing-card__delivery">15–20 working days &nbsp;|&nbsp; SEO Ready & Super Fast</p>
-              <a href="#contact" class="btn-primary">Get Website Quote</a>
-              <div class="pricing-card__guarantee"><svg viewBox="0 0 20 20" fill="none"><path d="M10 1l2.5 3H16a1 1 0 011 1v3.5L19.5 11 17 13.5V17a1 1 0 01-1 1h-3.5L10 20.5 7.5 18H4a1 1 0 01-1-1v-3.5L.5 11 3 8.5V5a1 1 0 011-1h3.5L10 1z" stroke="currentColor" stroke-width="1.5"/><path d="M7 11l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>100% Satisfaction Guaranteed</div>
+              <a href="#contact" class="btn-primary">Claim Website Package</a>
+              <div class="pricing-card__guarantee"><svg viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M10 1l2.5 3H16a1 1 0 011 1v3.5L19.5 11 17 13.5V17a1 1 0 01-1 1h-3.5L10 20.5 7.5 18H4a1 1 0 01-1-1v-3.5L.5 11 3 8.5V5a1 1 0 011-1h3.5L10 1z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path d="M7 11l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>100% Satisfaction Guaranteed</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 4: Additional Services -->
-    <section class="services" id="services">
-      <div class="container">
-        <h2 class="section-heading fade-in">We Grow With <em class="em-serif">Your Business</em></h2>
-        <div class="services__grid">
-          <div class="card fade-in">
-            <div class="services__icon"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8">
-                <circle cx="14" cy="14" r="12" />
-                <path d="M2 14h24M14 2a18 18 0 010 24M14 2a18 18 0 000 24" />
-              </svg></div>
-            <h3 class="services__title">Website Development</h3>
-            <p class="services__body">WordPress, responsive, SEO-ready</p><a href="#contact" class="btn-secondary">Get
-              Website Quote →</a>
-          </div>
-          <div class="card fade-in">
-            <div class="services__icon"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M2 17l12 7 12-7M2 11l12 7 12-7M14 4L2 11l12 7 12-7-12-7z" />
-              </svg></div>
-            <h3 class="services__title">Brand Identity Design</h3>
-            <p class="services__body">Complete visual systems & guidelines</p><a href="#contact"
-              class="btn-secondary">Explore Branding →</a>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <!-- Section 5: Portfolio -->
     <section class="portfolio" id="work">
@@ -1747,25 +2009,52 @@
         </div>
         <div class="masonry" id="portfolio-grid">
           <!-- Branding -->
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Anjappar%2060%20Logo.png" alt="Anjappar 60 Logo" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/8.png" alt="Branding Logo 8" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/9.png" alt="Branding Logo 9" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/10.png" alt="Branding Logo 10" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/11.png" alt="Branding Logo 11" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/12.png" alt="Branding Logo 12" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/13.png" alt="Branding Logo 13" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/14.png" alt="Branding Logo 14" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/15.png" alt="Branding Logo 15" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/16.png" alt="Branding Logo 16" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/17.png" alt="Branding Logo 17" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/18.png" alt="Branding Logo 18" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Aargee%20Gold.png" alt="Aargee Gold" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Matsyaa%20Infotech.png" alt="Matsyaa Infotech" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/SPS%20Oil.png" alt="SPS Oil" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Serene%20Tea.png" alt="Serene Tea" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Stanso.png" alt="Stanso" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Strategic%20Communications.png" alt="Strategic Communications" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
-          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Vedhant%20Oil.png" alt="Vedhant Oil" width="600" height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img
+              src="Portfolio%20logos%202/Anjappar%2060%20Logo.png" alt="Anjappar 60 Logo" width="600" height="600"><span
+              class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/8.png"
+              alt="Branding Logo 8" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/9.png"
+              alt="Branding Logo 9" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/10.png"
+              alt="Branding Logo 10" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/11.png"
+              alt="Branding Logo 11" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/12.png"
+              alt="Branding Logo 12" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/13.png"
+              alt="Branding Logo 13" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/14.png"
+              alt="Branding Logo 14" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/15.png"
+              alt="Branding Logo 15" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/16.png"
+              alt="Branding Logo 16" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/17.png"
+              alt="Branding Logo 17" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/18.png"
+              alt="Branding Logo 18" width="600" height="600"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img
+              src="Portfolio%20logos%202/Aargee%20Gold.png" alt="Aargee Gold" width="600" height="600" loading="lazy"
+              decoding="async"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img
+              src="Portfolio%20logos%202/Matsyaa%20Infotech.png" alt="Matsyaa Infotech" width="600" height="600"
+              loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/SPS%20Oil.png"
+              alt="SPS Oil" width="600" height="600" loading="lazy" decoding="async"><span
+              class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Serene%20Tea.png"
+              alt="Serene Tea" width="600" height="600" loading="lazy" decoding="async"><span
+              class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img src="Portfolio%20logos%202/Stanso.png"
+              alt="Stanso" width="600" height="600" loading="lazy" decoding="async"><span
+              class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img
+              src="Portfolio%20logos%202/Strategic%20Communications.png" alt="Strategic Communications" width="600"
+              height="600" loading="lazy" decoding="async"><span class="portfolio-item__badge">Logos</span></div>
+          <div class="portfolio-item fade-in" data-category="branding"><img
+              src="Portfolio%20logos%202/Vedhant%20Oil.png" alt="Vedhant Oil" width="600" height="600" loading="lazy"
+              decoding="async"><span class="portfolio-item__badge">Logos</span></div>
 
 
           <!-- Websites -->
@@ -1797,8 +2086,8 @@
               rel="noopener"><img src="Website%20Portfolio/Stematic.png" alt="Stematic" width="600"
                 height="400"></a><span class="portfolio-item__badge">Websites</span></div>
         </div>
-        <div style="text-align:center;margin-top:var(--space-10)"><a href="#contact" class="btn-primary">See How We Can
-            Transform Your Brand</a></div>
+        <div style="text-align:center;margin-top:var(--space-10)"><a href="#contact" class="btn-primary">Contact Us</a>
+        </div>
       </div>
     </section>
 
@@ -1851,146 +2140,9 @@
               </svg><svg viewBox="0 0 16 16">
                 <path d="M8 1l2 4.5H15l-3.8 3 1.5 4.8L8 10.5 3.3 13.3l1.5-4.8L1 5.5h5z" fill="currentColor" />
               </svg></div>
-            <p class="testimonial-card__quote">"₹7,999 for this quality? Unbelievable value. Completely exceeded
-              expectations."</p>
+            <p class="testimonial-card__quote">"Complete steal for this quality! Unbelievable value. Completely exceeded
+              our expectations."</p>
             <p class="testimonial-card__author">— Indian Institute of Catering, Venkatesh</p>
-          </div>
-        </div>
-        <div class="stats-row fade-in">
-          <div>
-            <div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z" />
-                <path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z" />
-                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 3 0 3 0" />
-                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-3 0-3" />
-              </svg></div>
-            <div class="stat__number">50+</div>
-            <div class="stat__label">Brands Launched</div>
-          </div>
-          <div>
-            <div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polygon
-                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-              </svg></div>
-            <div class="stat__number">4.9/5</div>
-            <div class="stat__label">Rating</div>
-          </div>
-          <div>
-            <div class="stat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg></div>
-            <div class="stat__number">7-Day</div>
-            <div class="stat__label">Delivery Promise</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 7: Process -->
-    <section class="process">
-      <div class="container">
-        <h2 class="section-heading fade-in" style="text-align:center">Three Simple Steps to Your <em
-            class="em-serif">New Brand</em></h2>
-        <div class="process__grid">
-          <div class="process__step card fade-in">
-            <div class="process__num">1</div>
-            <h3 class="process__step-title">Brief & Discovery</h3>
-            <p class="process__step-body">We learn your vision, audience, and goals.</p>
-          </div>
-          <svg class="process__arrow process__arrow--1" width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <path d="M6 14h16m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-          <div class="process__step card fade-in">
-            <div class="process__num">2</div>
-            <h3 class="process__step-title">Design & Review</h3>
-            <p class="process__step-body">You receive concepts; we refine until perfect.</p>
-          </div>
-          <svg class="process__arrow process__arrow--2" width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <path d="M6 14h16m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-          <div class="process__step card fade-in">
-            <div class="process__num">3</div>
-            <h3 class="process__step-title">Launch & Scale</h3>
-            <p class="process__step-body">Final files delivered, brand-ready for the world.</p>
-          </div>
-        </div>
-        <div style="text-align:center;margin-top:var(--space-10)"><a href="#contact" class="btn-primary">Start Step 1
-            Now</a></div>
-      </div>
-    </section>
-
-    <!-- Section 8: Pricing Clarity Table -->
-    <section class="pricing-table">
-      <div class="container">
-        <h2 class="section-heading fade-in" style="text-align:center">Transparent Pricing, <em class="em-serif">No
-            Surprises</em></h2>
-        <div class="pricing-grid fade-in">
-          <div class="pricing-grid__head">Package</div>
-          <div class="pricing-grid__head">Price</div>
-          <div class="pricing-grid__head">Badge</div>
-          <div>Branding Package</div>
-          <div style="font-weight:700">₹7,999</div>
-          <div><span class="pricing-grid__badge">Most Popular</span></div>
-          <div>Website</div>
-          <div>Starting ₹19,999</div>
-          <div>—</div>
-        </div>
-        <p class="pricing-includes fade-in">✓ Dedicated designer &nbsp;&nbsp;✓ Source files &nbsp;&nbsp;✓ Revisions</p>
-        <div style="text-align:center"><a href="#contact" class="btn-primary">Choose Your Package</a></div>
-      </div>
-    </section>
-
-    <!-- Section 9: Objection Handler -->
-    <section class="objection">
-      <div class="container">
-        <h2 class="section-heading fade-in">Why Businesses Choose Us <em class="em-serif">Over Others</em></h2>
-        <div class="objection__grid">
-          <div class="objection__card fade-in">
-            <div class="objection__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-              </svg></div>
-            <p class="objection__item-title">Speed</p>
-            <p class="objection__item-body">Fixed timelines, no waiting weeks for updates. Your brand ships on schedule,
-              every time.</p>
-          </div>
-          <div class="objection__card fade-in">
-            <div class="objection__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 3h12l4 6-10 13L2 9z" />
-                <path d="M2 9h20" />
-                <path d="M10 3l-4 6M14 3l4 6" />
-              </svg></div>
-            <p class="objection__item-title">Value</p>
-            <p class="objection__item-body">Premium quality at startup-friendly pricing. No agency markup, no hidden
-              fees.</p>
-          </div>
-          <div class="objection__card fade-in">
-            <div class="objection__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 2 7 12 12 22 7 12 2" />
-                <polyline points="2 17 12 22 22 17" />
-                <polyline points="2 12 12 17 22 12" />
-              </svg></div>
-            <p class="objection__item-title">Consistency</p>
-            <p class="objection__item-body">One dedicated team, one visual language across every touchpoint and
-              deliverable.</p>
-          </div>
-          <div class="objection__card fade-in">
-            <div class="objection__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                <polyline points="17 6 23 6 23 12" />
-              </svg></div>
-            <p class="objection__item-title">Flexibility</p>
-            <p class="objection__item-body">Add retainer, websites, or ads as you grow. We scale with your business
-              needs.</p>
           </div>
         </div>
       </div>
@@ -2001,12 +2153,16 @@
       <div class="container">
         <div class="final-cta__text">
           <h2 class="section-heading fade-in">Ready to Build a Brand That <em class="em-serif">Stands Out</em>?</h2>
-          <p class="final-cta__body">Your competitors are launching while you're still thinking. Get branding clarity in
-            8 to 10
-            days.</p>
-          <div class="final-cta__btns"><a href="#pricing" class="btn-primary">Get Your Branding Package — ₹7,999</a><a
-              href="mailto:info@heliocenture.com" class="btn-secondary">Schedule Free Consultation</a></div>
-          <p class="final-cta__guarantee">100% Money Back Guaranteed — If you're not satisfied, we revise until you are.</p>
+          <div class="final-cta__guarantee-wrapper fade-in">
+            <div class="final-cta__guarantee-inner">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent)">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              100% Money Back Guaranteed — If you're not satisfied, we revise until you are.
+            </div>
+          </div>
         </div>
 
         <div class="final-cta__form fade-in">
@@ -2039,16 +2195,16 @@
             <div class="form-group">
               <label for="footer-service">Service Needed</label>
               <select id="footer-service" name="service">
-                <option value="Logo">Logo Design</option>
-                <option value="Website">Website Development</option>
-                <option value="Creative Designs">Creative Designs</option>
+                <option value="Logo Package">Logo Package</option>
+                <option value="Branding Package">Branding Package</option>
+                <option value="Website Package">Website Package</option>
               </select>
             </div>
             <div class="form-group">
               <label for="footer-message">Message</label>
               <textarea id="footer-message" name="message" placeholder="How can we help?" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn-primary">Send Inquiry</button>
+            <button type="submit" class="btn-primary">Contact Us</button>
           </form>
         </div>
       </div>
@@ -2062,35 +2218,27 @@
         <a href="#" class="footer__logo" aria-label="HelioCenture Home"><img src="assets/logo.png" alt="HelioCenture"
             height="24"></a>
         <div class="footer__contact">info@heliocenture.com &nbsp;|&nbsp; +91 94435 20166</div>
-        <nav class="footer__links"><a href="#work">Portfolio</a><a href="#services">Services</a><a
-            href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
-        <div class="footer__social">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="1.8">
-              <rect x="2" y="2" width="20" height="20" rx="5" />
-              <circle cx="12" cy="12" r="5" />
-              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
-            </svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="1.8">
-              <rect x="2" y="2" width="20" height="20" rx="3" />
-              <path d="M8 11v5M8 8v.01M12 16v-5a2 2 0 014 0v5" />
-            </svg></a>
-          <a href="#" aria-label="Behance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="1.8">
-              <path
-                d="M3 12h6a3 3 0 100-6H3v12h6a3.5 3.5 0 100-7M15 8h6M16 16c2.5 0 5-1 5-4s-2.5-4-5-4-4 2-4 4 2 4 4 4z" />
-            </svg></a>
-        </div>
+        <nav class="footer__links"><a href="#work">Portfolio</a><a href="#pricing">Pricing</a><a
+            href="#contact">Contact</a></nav>
+
         <p class="footer__copy">© 2025 HelioCenture. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/919443520166" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <a href="https://wa.me/919443520166" class="floating-whatsapp" target="_blank" rel="noopener noreferrer"
+    aria-label="Chat with us on WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+  </a>
+
+  <!-- Phone Floating Button -->
+  <a href="tel:+919443520166" class="floating-phone" aria-label="Call us">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
     </svg>
   </a>
 

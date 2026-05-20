@@ -5,6 +5,27 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18106606403"></script>
     <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'AW-18106606403'); </script>
 
+    <!-- Event snippet for Submit lead form (1) conversion page -->
+    <script>
+      (function() {
+        const params = new URLSearchParams(window.location.search);
+        const service = params.get('service');
+        let val = 1.0;
+        if (service === 'Logo Package') {
+          val = 7999.0;
+        } else if (service === 'Branding Package') {
+          val = 19999.0;
+        } else if (service === 'Website Package') {
+          val = 20000.0;
+        }
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18106606403/I2rJCKLrurAcEMPG87lD',
+          'value': val,
+          'currency': 'INR'
+        });
+      })();
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You — HelioCenture</title>

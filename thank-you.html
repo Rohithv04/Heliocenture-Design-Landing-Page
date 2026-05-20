@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18106606403"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'AW-18106606403'); </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You — HelioCenture</title>
@@ -9,12 +13,50 @@
     <style>
         :root {
             --color-accent: #E4572E;
+            --color-accent-hover: #C93D15;
             --color-bg: #F8F8F6;
+            --color-surface: #F2F2EF;
+            --color-surface-2: #EAEAE7;
             --color-text: #111;
             --color-text-muted: #6B6B6B;
-            --font-body: 'Satoshi', sans-serif;
-            --font-display: 'Instrument Serif', serif;
+            --color-border: #E5E5E5;
+            --font-body: 'Satoshi', 'Inter', sans-serif;
+            --font-display: 'Instrument Serif', Georgia, serif;
+            
+            --space-1: .25rem;
+            --space-2: .5rem;
+            --space-3: .75rem;
+            --space-4: 1rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+            
+            --radius-sm: .375rem;
+            --radius-md: .5rem;
+            --radius-lg: .75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
+            --radius-full: 9999px;
+            
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, .06), 0 1px 2px rgba(0, 0, 0, .04);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, .08), 0 2px 4px rgba(0, 0, 0, .05);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, .10), 0 4px 8px rgba(0, 0, 0, .06);
+            --ease-spring: cubic-bezier(.16, 1, .3, 1);
+            --transition: 200ms var(--ease-spring);
         }
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
         body {
             font-family: var(--font-body);
             background: var(--color-bg);
@@ -25,11 +67,18 @@
             justify-content: center;
             min-height: 100vh;
             text-align: center;
+            padding-top: 80px; /* Space for the fixed navbar */
         }
+
         .container {
             max-width: 480px;
             padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
+        
         .icon {
             width: 80px;
             height: 80px;
@@ -40,17 +89,20 @@
             justify-content: center;
             margin: 0 auto 2rem;
         }
+        
         h1 {
             font-family: var(--font-display);
             font-style: italic;
             font-size: 3rem;
             margin-bottom: 1rem;
         }
+        
         p {
             color: var(--color-text-muted);
             line-height: 1.6;
             margin-bottom: 2rem;
         }
+        
         .btn {
             display: inline-block;
             background: var(--color-accent);
@@ -59,10 +111,190 @@
             border-radius: 0.75rem;
             text-decoration: none;
             font-weight: 500;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, background-color var(--transition);
         }
+        
         .btn:hover {
             transform: translateY(-2px);
+            background: var(--color-accent-hover);
+        }
+
+        /* === NAVBAR === */
+        .navbar {
+            position: fixed;
+            top: var(--space-4);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            background: color-mix(in srgb, var(--color-bg) 90%, transparent);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-border);
+            padding: 6px 6px 6px 20px;
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            max-width: 720px;
+            width: calc(100% - var(--space-8));
+        }
+
+        .navbar__logo {
+            display: flex;
+            align-items: center;
+            padding-left: 0;
+        }
+
+        .navbar__logo img {
+            height: 22px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .navbar__links {
+            display: flex;
+            align-items: center;
+            gap: var(--space-1);
+            margin-left: auto;
+        }
+
+        .navbar__links a {
+            font-size: var(--text-sm);
+            font-weight: 500;
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-md);
+            transition: background var(--transition);
+            white-space: nowrap;
+        }
+
+        .navbar__links a:hover {
+            background: var(--color-surface);
+        }
+
+        .navbar__links a:focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 2px;
+        }
+
+        .navbar__cta {
+            margin-left: var(--space-2);
+            white-space: nowrap;
+            flex-shrink: 0;
+            padding: 8px 16px;
+            min-height: auto;
+            font-size: 0.875rem;
+            border-radius: var(--radius-full);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-accent);
+            color: #fff;
+            font-weight: 500;
+            border: none;
+            transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+        }
+
+        .navbar__cta:hover {
+            background: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar__hamburger {
+            display: none;
+            background: none;
+            border: none;
+            padding: var(--space-2);
+            color: var(--color-text);
+            width: 40px;
+            height: 40px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            position: relative;
+            transition: var(--transition);
+            margin-left: auto;
+        }
+
+        .navbar__hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background-color: currentColor;
+            border-radius: 2px;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .navbar__hamburger.is-active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .navbar__hamburger.is-active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+
+        .navbar__hamburger.is-active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        .mobile-drawer {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 99;
+            background: color-mix(in srgb, var(--color-bg) 97%, transparent);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-6);
+        }
+
+        .mobile-drawer.open {
+            display: flex;
+        }
+
+        .mobile-drawer a {
+            font-size: var(--text-lg);
+            font-weight: 500;
+            padding: var(--space-3);
+        }
+
+        .mobile-drawer .btn-primary {
+            margin-top: var(--space-4);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-accent);
+            color: #fff;
+            border-radius: var(--radius-lg);
+            padding: var(--space-3) var(--space-6);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            border: none;
+            transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+            min-height: 44px;
+        }
+
+        @media(max-width:768px) {
+            .navbar {
+                padding: 6px 12px 6px 20px;
+            }
+
+            .navbar__links,
+            .navbar__cta {
+                display: none;
+            }
+
+            .navbar__hamburger {
+                display: flex;
+                margin-right: -4px;
+            }
         }
 
         /* === WHATSAPP FLOATING BUTTON === */
@@ -153,6 +385,32 @@
     </style>
 </head>
 <body>
+    <!-- Navbar -->
+    <header class="navbar" role="banner">
+        <a href="index.html" class="navbar__logo" aria-label="HelioCenture Home">
+            <img src="assets/logo.png" alt="HelioCenture" height="28">
+        </a>
+        <nav class="navbar__links" role="navigation">
+            <a href="index.html#work">Portfolio</a>
+            <a href="index.html#pricing">Pricing</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <a href="index.html#pricing" class="navbar__cta">Get Branding</a>
+
+        <button id="hamburger-btn" class="navbar__hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    
+    <div class="mobile-drawer" id="drawer">
+        <a href="index.html#work" onclick="closeMenu()">Portfolio</a>
+        <a href="index.html#pricing" onclick="closeMenu()">Pricing</a>
+        <a href="index.html#contact" onclick="closeMenu()">Contact</a>
+        <a href="index.html#pricing" class="btn-primary" onclick="closeMenu()">Get Branding</a>
+    </div>
+
     <div class="container">
         <div class="icon">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -165,7 +423,7 @@
     </div>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919443520166" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <a href="https://wa.me/919443520166" class="floating-whatsapp" id="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
         </svg>
@@ -177,5 +435,35 @@
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
         </svg>
     </a>
+
+    <script>
+        function toggleMenu() {
+            const btn = document.getElementById('hamburger-btn');
+            const drawer = document.getElementById('drawer');
+            const isOpen = drawer.classList.toggle('open');
+            btn.classList.toggle('is-active', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        }
+
+        function closeMenu() {
+            const btn = document.getElementById('hamburger-btn');
+            const drawer = document.getElementById('drawer');
+            drawer.classList.remove('open');
+            btn.classList.remove('is-active');
+            document.body.style.overflow = '';
+        }
+
+        // Dynamically update the WhatsApp link if waUrl is passed in query parameters
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            const waUrlParam = params.get('waUrl');
+            if (waUrlParam) {
+                const waBtn = document.getElementById('wa-btn');
+                if (waBtn) {
+                    waBtn.href = waUrlParam;
+                }
+            }
+        })();
+    </script>
 </body>
 </html>
